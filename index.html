@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mit Designsystem</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="ds-header">
+      <div class="ds-container">
+        <h1 class="ds-title">Mit Designsystem</h1>
+        <p class="ds-subtitle">Tokens + komponenter (helt basic)</p>
+        <p><a href="./docs.html">Gå til docs →</a></p>
+      </div>
+    </header>
+
+    <main class="ds-container ds-stack">
+      <section class="ds-card">
+        <h2>Buttons</h2>
+        <div class="ds-row">
+          <button class="ds-btn ds-btn--primary" type="button">Primary</button>
+          <button class="ds-btn ds-btn--secondary" type="button">Secondary</button>
+          <button class="ds-btn ds-btn--ghost" type="button">Ghost</button>
+        </div>
+      </section>
+
+      <section class="ds-card">
+        <h2>Input</h2>
+        <label class="ds-label" for="name">Navn</label>
+        <input class="ds-input" id="name" name="name" placeholder="Skriv dit navn…" />
+        <p class="ds-help">Eksempel på hjælpetekst.</p>
+      </section>
+
+      <section class="ds-card">
+        <h2>Alert</h2>
+        <div class="ds-alert" role="status">
+          <strong>Tip:</strong> Du kan bygge videre med flere komponenter i den her side.
+        </div>
+      </section>
+
+      <section class="ds-card">
+        <h2>Theme toggle (demo)</h2>
+        <p>Tryk for at skifte mellem lys/mørk.</p>
+        <button class="ds-btn ds-btn--secondary" type="button" id="themeToggle">
+          Skift tema
+        </button>
+      </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+.ds-btn {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font: inherit;
+  cursor: pointer;
+  transition: transform .03s ease, background .15s ease, border-color .15s ease;
+}
+
+.ds-btn:active { transform: translateY(1px); }
+
+.ds-btn--primary {
+  background: var(--ds-primary);
+  color: white;
+}
+.ds-btn--primary:hover { background: var(--ds-primary-hover); }
+
+.ds-btn--secondary {
+  background: transparent;
+  border-color: var(--ds-border);
+  color: var(--ds-fg);
+}
+.ds-btn--secondary:hover { border-color: var(--ds-muted); }
+
+.ds-btn--ghost {
+  background: transparent;
+  color: var(--ds-fg);
+}
+.ds-btn--ghost:hover { background: rgba(0,0,0,.05); }
+[data-theme="dark"] .ds-btn--ghost:hover { background: rgba(255,255,255,.06); }
