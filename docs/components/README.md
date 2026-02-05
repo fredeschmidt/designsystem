@@ -1,4 +1,6 @@
 # Components
+...existing code...
+- [Checkbox](checkbox.md): Checkbox component supporting checked, indeterminate, and unchecked states, with and without background circles.
 
 Her ligger korte beskrivelser af vores komponenter.
 
