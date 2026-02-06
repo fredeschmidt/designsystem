@@ -1,6 +1,7 @@
 /* ========== Type System ========== */
 @import "../components/button/button.css";
 @import "../components/checkbox/checkbox.css";
+@import "../components/radio/radio.css";
 
 /* ========== Type Token Overrides ========== */
 :root[data-type="type-1"] {
