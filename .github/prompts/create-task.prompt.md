@@ -70,7 +70,7 @@ Links:
 - ADR: docs/decisions/ADR-xxxx-title.md (if relevant)
 - PR template: .github/pull_request_template.md
 
-7) Create subtasks (always):
+7) Create subtasks (always): Create these as subtasks under the newly created task (set the created task as the parent). Do NOT add these subtasks as project memberships—omit the project field when creating them so they appear only inside the parent task and do not show individually in the project task list.
 - Docs
 - ADR (if needed)
 - Implementation
