@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="da">
+<html lang="da" data-type="type-2">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +10,11 @@
     <header class="ds-header">
       <div class="ds-container">
         <h1 class="ds-title">Mit Designsystem</h1>
-        <p class="ds-subtitle">Tokens + komponenter (helt basic)</p>
-        <p><a href="./docs.html">Gå til docs →</a></p>
       </div>
     </header>
 
-
     <main class="ds-container ds-stack">
+      <!-- All components shown in type-1 by default -->
       <section class="ds-card">
         <h2>Buttons</h2>
         <div class="ds-row">
@@ -38,55 +36,11 @@
           </div>
           <div>
             <label>
-              <input type="checkbox" class="indeterminate">
-              <span class="checkbox indeterminate"></span>
-              Indeterminate
-            </label>
-          </div>
-          <div>
-            <label>
               <input type="checkbox">
               <span class="checkbox"></span>
               Unchecked
             </label>
           </div>
-        </div>
-        <div class="checkbox-row bg">
-          <div>
-            <label>
-              <input type="checkbox" checked>
-              <span class="checkbox checked bg"></span>
-              Checked (bg)
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="checkbox" class="indeterminate">
-              <span class="checkbox indeterminate bg"></span>
-              Indeterminate (bg)
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="checkbox">
-              <span class="checkbox bg"></span>
-              Unchecked (bg)
-            </label>
-          </div>
-        </div>
-      </section>
-
-      <section class="ds-card">
-        <h2>Input</h2>
-        <label class="ds-label" for="name">Navn</label>
-        <input class="ds-input" id="name" name="name" placeholder="Skriv dit navn…" />
-        <p class="ds-help">Eksempel på hjælpetekst.</p>
-      </section>
-
-      <section class="ds-card">
-        <h2>Alert</h2>
-        <div class="ds-alert" role="status">
-          <strong>Tip:</strong> Du kan bygge videre med flere komponenter i den her side.
         </div>
       </section>
 
@@ -98,6 +52,16 @@
         </button>
       </section>
     </main>
+
+    <!-- Type dropdown fixed in bottom right -->
+    <div id="typeDropdown" style="position:fixed;bottom:24px;right:24px;z-index:1000;background:var(--ds-surface-2,#fff);border:1px solid var(--ds-border,#e5e7eb);border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:12px 18px;display:flex;align-items:center;gap:8px;">
+      <label for="typeSwitcher" style="font-weight:600;">Skift type:</label>
+      <select id="typeSwitcher" style="padding:6px 12px;border-radius:8px;border:1px solid var(--ds-border,#e5e7eb);background:var(--ds-bg,#fff);font-size:16px;">
+        <option value="type-1">Type 1</option>
+        <option value="type-2">Type 2</option>
+        <option value="type-3">Type 3</option>
+      </select>
+    </div>
 
     <script src="./js/app.js"></script>
   </body>

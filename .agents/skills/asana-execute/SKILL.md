@@ -35,7 +35,10 @@ This skill is activated when the user writes:
 3b. When implementing the solution (patch/diff), you MUST:
    - Create or update the component's HTML in index.html in its own <section class="ds-card"> inside <main class="ds-container ds-stack"> (with title, demo, and states/variants)
    - Ensure the demo matches Figma states/variants as closely as possible
-   - Create or update the relevant CSS and import it in css/styles.css (do not link component CSS directly in index.html)
+   - All type-specific styling must be controlled by tokens (CSS custom properties) in css/styles.css. There should only be one stylesheet per component (e.g., button.css, input.css, etc.), and these must use the tokens for all colors, radii, etc.
+   - To support multiple types, define token overrides for each type in css/styles.css using :root[data-type="type-1"], :root[data-type="type-2"], etc. The main element in index.html should have a data-type attribute to control which type is active.
+   - Implement logic in index.html (JS) to allow switching the data-type attribute on the main container, so all components update their look instantly via tokens.
+   - Do not create separate CSS files for each type. Only one CSS file per component, and all type differences must be handled by tokens.
    - Create or update the relevant JS
    - Update docs/components/README.md
    - Update docs/decisions/README.md if relevant

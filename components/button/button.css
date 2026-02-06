@@ -1,8 +1,8 @@
 .ds-btn {
   appearance: none;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  padding: 10px 14px;
+  border: var(--ds-btn-border-width, 1px) solid var(--ds-border);
+  border-radius: var(--ds-btn-radius, 999px);
+  padding: var(--ds-btn-padding, 10px 14px);
   font: inherit;
   cursor: pointer;
   transition: transform .03s ease, background .15s ease, border-color .15s ease;

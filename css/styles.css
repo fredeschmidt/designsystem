@@ -1,26 +1,79 @@
-/* ========== Components ========== */
+/* ========== Type System ========== */
 @import "../components/button/button.css";
-@import "../components/input/input.css";
-@import "../components/alert/alert.css";
 @import "../components/checkbox/checkbox.css";
 
+/* ========== Type Token Overrides ========== */
+:root[data-type="type-1"] {
+  --ds-primary: #2563eb;
+  --ds-primary-hover: #1d4ed8;
+  --ds-bg: #ffffff;
+  --ds-fg: #111827;
+  --ds-header: #111827;
+  --ds-border: #e5e7eb;
+  --ds-radius: 12px;
+  --ds-btn-radius: 999px;
+  --ds-btn-padding: 10px 14px;
+  --ds-btn-border-width: 1px;
+  --ds-checkbox-radius: 6px;
+  --ds-checkbox-padding: 0;
+  --ds-checkbox-border-width: 2px;
+  --ds-surface: #f9fafb;
+  --ds-surface-2: #ffffff;
+  --ds-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
+}
+
+:root[data-type="type-2"] {
+  --ds-primary: #ff6565;
+  --ds-primary-hover: #ff6565;
+  --ds-bg: #ffffff;
+  --ds-fg: #ffffff;
+  --ds-header: #111827;
+  --ds-border: #f7ffcb;
+  --ds-radius: 8px;
+  --ds-btn-radius: 8px;
+  --ds-btn-padding: 8px 18px;
+  --ds-btn-border-width: 2px;
+  --ds-checkbox-radius: 20px;
+  --ds-checkbox-padding: 2px;
+  --ds-checkbox-border-width: 3px;
+  --ds-surface: #a7d6ff;
+  --ds-surface-2: #6c63ff; 
+  --ds-shadow: 0 2px 8px rgba(108,99,255,0.08);
+  --ds-shadow: 0 2px 8px rgba(234,179,8,0.08);
+}
+
+:root[data-type="type-3"] {
+  --ds-primary: #10b981;
+  --ds-primary-hover: #059669;
+  --ds-bg: #ffffff;
+  --ds-fg: #064e3b;
+  --ds-header: #111827;
+  --ds-border: #6ee7b7;
+  --ds-radius: 20px;
+  --ds-btn-radius: 4px;
+  --ds-btn-padding: 14px 24px;
+  --ds-btn-border-width: 3px;
+  --ds-checkbox-radius: 2px;
+  --ds-checkbox-padding: 4px;
+  --ds-checkbox-border-width: 1px;
+  --ds-surface: #f9fafb;
+  --ds-surface-2: #ffffff;
+  --ds-shadow: 0 2px 8px rgba(16,185,129,0.08);
+}
+
 /* ========== Design Tokens (start her) ========== */
+
 :root {
   --ds-font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   --ds-radius: 12px;
-
   --ds-bg: #ffffff;
   --ds-fg: #111827;
   --ds-muted: #6b7280;
-
   --ds-border: #e5e7eb;
-
   --ds-primary: #2563eb;
   --ds-primary-hover: #1d4ed8;
-
   --ds-surface: #f9fafb;
   --ds-surface-2: #ffffff;
-
   --ds-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
 }
 
@@ -58,6 +111,7 @@ body {
 .ds-header {
   border-bottom: 1px solid var(--ds-border);
   background: var(--ds-surface);
+  color: var(--ds-header);
 }
 
 .ds-title { margin: 0; font-size: 28px; }
