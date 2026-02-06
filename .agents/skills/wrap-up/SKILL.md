@@ -13,8 +13,9 @@ This skill is activated when the user writes:
 2. All changes in the current branch are committed. The commit message should be descriptive and summarize the feature or fix (e.g., "Add checkbox component to design system").
 3. The feature branch is pushed to the remote repository (published) before switching branches.
 4. The current branch is merged into main.
-5. The working directory is switched to the main branch and left there.
-6. Confirm to the user that the process is complete and you are now on main.
+5. The feature branch is merged into main as the last step.
+6. The working directory is switched to the main branch and left there.
+7. Confirm to the user that the process is complete and you are now on main.
 
 ## Example workflow
 - User writes: "wrap up"
@@ -25,6 +26,7 @@ This skill is activated when the user writes:
   - Pushes the feature branch to the remote repository
   - Switches to main
   - Merges the feature branch
+  - Merges the feature branch into main (last step)
   - Stays on main
   - Confirms completion
 

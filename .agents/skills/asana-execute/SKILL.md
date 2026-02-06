@@ -1,3 +1,4 @@
+
 ---
 name: asana-execute
 summary: Skill for executing Asana tasks in the project "AI PROJEKT". Follows a structured workflow for implementation, review, and status updates.
@@ -51,3 +52,4 @@ This skill is activated when the user writes:
 8. IMPORTANT:
    - Merge/deploy must NEVER happen automatically.
    - Never set Status=Done unless the user explicitly says "merged" or "completed".
+9. If the branch for the current task is published and merged into main, update the Asana task status to "Done".
