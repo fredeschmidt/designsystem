@@ -3,8 +3,10 @@ name: asana-plan
 description: Create and manage Asana tasks via MCP, following a structured process for backlog, bugs, and design tasks. Use when automating Asana task creation from Figma links or screenshots.
 ---
 
-# Asana-plan Skill Instructions
 
+# IMPORTANT: ALWAYS create tasks in the Asana project "AI PROJEKT" (project ID: 1213097315704457). Do NOT create tasks in "Design System" or any other project. This is a hard rule for all task creation.
+
+# Asana-plan Skill Instructions
 
 This skill automates the creation of tasks in the Asana project "AI PROJEKT" (project ID: 1213097315704457) using MCP. Use this skill when a user requests a new Asana task and provides a Figma link or screenshots.
 

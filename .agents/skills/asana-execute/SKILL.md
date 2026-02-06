@@ -7,7 +7,7 @@ summary: Skill for executing Asana tasks in the project "AI PROJEKT". Follows a 
 # Asana-execute Skill Instructions
 
 This skill is activated when the user writes:
-"Solve the task with ID <asana-id>"
+"Reolve this task with ID <asana-id>"
 
 ## Standard
 - Asana project: "AI PROJEKT"
