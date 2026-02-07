@@ -1,15 +1,4 @@
 (function () {
-  // Theme toggle
-  const btn = document.getElementById("themeToggle");
-  if (btn) {
-    btn.addEventListener("click", () => {
-      const current = document.documentElement.getAttribute("data-theme");
-      const next = current === "dark" ? null : "dark";
-      if (next) document.documentElement.setAttribute("data-theme", next);
-      else document.documentElement.removeAttribute("data-theme");
-    });
-  }
-
   // Type switcher
   const typeSwitcher = document.getElementById("typeSwitcher");
   if (typeSwitcher) {

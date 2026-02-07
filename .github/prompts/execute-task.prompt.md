@@ -54,7 +54,11 @@ Use this prompt when the user writes: "Resolve this task with ID <asana-id>"
   - main container has data-type attribute
   - JS toggles active data-type so tokens update all components
 - Only one CSS file per component (button.css, input.css, etc.)
+- When creating a component, always create its own stylesheet named for the component (for example `button.css`) and add an import statement for it at the top of `css/styles.css` so component styles are composed from the top-level stylesheet.
+- If the component requires JavaScript, create a `component-name.js` file and import it from `js/app.js` (add the import near the top of `js/app.js` so the component's script is included in the app bundle).
 - Do NOT create separate CSS per type (type differences must be tokens only)
+- Every time you add a new component, build and deliver it with three distinct visual states: `type-1`, `type-2`, and `type-3`.
+- The component demo in `index.html` must include examples for all three types (use the main container's `data-type` attribute to switch types), and ensure CSS tokens cover type differences rather than separate component files.
 - Update docs/components/README.md
 - Update docs/decisions/README.md if relevant
  - Ensure HTML is semantically correct: use appropriate semantic elements, correct nesting, accessible landmarks, and valid ARIA where needed.

@@ -1,4 +1,3 @@
-/* ========== Type System ========== */
 
 
 /* ========== Type Token Overrides ========== */
@@ -9,13 +8,6 @@
   --ds-fg: #111827;
   --ds-header: #111827;
   --ds-border: #e5e7eb;
-  --ds-radius: 12px;
-  --ds-btn-radius: 999px;
-  --ds-btn-padding: 10px 14px;
-  --ds-btn-border-width: 1px;
-  --ds-checkbox-radius: 6px;
-  --ds-checkbox-padding: 0;
-  --ds-checkbox-border-width: 2px;
   --ds-surface: #f9fafb;
   --ds-surface-2: #ffffff;
   --ds-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
@@ -25,19 +17,11 @@
   --ds-primary: #ff6565;
   --ds-primary-hover: #ff6565;
   --ds-bg: #ffffff;
-  --ds-fg: #ffffff;
+  --ds-fg: #111827;
   --ds-header: #111827;
   --ds-border: #f7ffcb;
-  --ds-radius: 8px;
-  --ds-btn-radius: 8px;
-  --ds-btn-padding: 8px 18px;
-  --ds-btn-border-width: 2px;
-  --ds-checkbox-radius: 20px;
-  --ds-checkbox-padding: 2px;
-  --ds-checkbox-border-width: 3px;
-  --ds-surface: #a7d6ff;
-  --ds-surface-2: #6c63ff; 
-  --ds-shadow: 0 2px 8px rgba(108,99,255,0.08);
+  --ds-surface: #f9fafb;
+  --ds-surface-2: #ffffff;
   --ds-shadow: 0 2px 8px rgba(234,179,8,0.08);
 }
 
@@ -48,13 +32,6 @@
   --ds-fg: #064e3b;
   --ds-header: #111827;
   --ds-border: #6ee7b7;
-  --ds-radius: 20px;
-  --ds-btn-radius: 4px;
-  --ds-btn-padding: 14px 24px;
-  --ds-btn-border-width: 3px;
-  --ds-checkbox-radius: 2px;
-  --ds-checkbox-padding: 4px;
-  --ds-checkbox-border-width: 1px;
   --ds-surface: #f9fafb;
   --ds-surface-2: #ffffff;
   --ds-shadow: 0 2px 8px rgba(16,185,129,0.08);
@@ -74,20 +51,6 @@
   --ds-surface: #f9fafb;
   --ds-surface-2: #ffffff;
   --ds-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
-}
-
-[data-theme="dark"] {
-  --ds-bg: #0b1020;
-  --ds-fg: #e5e7eb;
-  --ds-muted: #a1a1aa;
-
-  --ds-border: #243042;
-
-  --ds-primary: #60a5fa;
-  --ds-primary-hover: #3b82f6;
-
-  --ds-surface: #0f172a;
-  --ds-surface-2: #111b33;
 }
 
 /* ========== Base ========== */
