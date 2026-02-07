@@ -57,6 +57,7 @@ Use this prompt when the user writes: "Resolve this task with ID <asana-id>"
 - Do NOT create separate CSS per type (type differences must be tokens only)
 - Update docs/components/README.md
 - Update docs/decisions/README.md if relevant
+ - Ensure HTML is semantically correct: use appropriate semantic elements, correct nesting, accessible landmarks, and valid ARIA where needed.
 
 ## Review phase
 After implementation:
