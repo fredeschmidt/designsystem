@@ -11,6 +11,7 @@ Use this prompt when the user writes: "wrap up"
 ## HARD RULES
 - Never delete branches automatically.
 - Never deploy automatically.
+ - When the wrap-up workflow completes, set the related Asana task status to "Klar til godkendelse".
 
 ## Workflow (ordered)
 1) Check working tree:
@@ -32,3 +33,4 @@ Use this prompt when the user writes: "wrap up"
 5) End state:
 - Leave repo on main
 - Confirm completion in chat.
+ - Set the related Asana task status to "Klar til godkendelse" when all steps complete.
