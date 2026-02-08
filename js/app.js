@@ -1,12 +1,12 @@
 (function () {
-  // Type switcher
-  const typeSwitcher = document.getElementById("typeSwitcher");
-  if (typeSwitcher) {
-    // Set dropdown to current type
-    const currentType = document.documentElement.getAttribute("data-type") || "type-1";
-    typeSwitcher.value = currentType;
-    typeSwitcher.addEventListener("change", function () {
-      document.documentElement.setAttribute("data-type", this.value);
+  // Theme switcher
+  const themeSwitcher = document.getElementById("themeSwitcher");
+  if (themeSwitcher) {
+    // Set dropdown to current theme
+    const currentTheme = document.documentElement.getAttribute("data-theme") || "theme-1";
+    themeSwitcher.value = currentTheme;
+    themeSwitcher.addEventListener("change", function () {
+      document.documentElement.setAttribute("data-theme", this.value);
     });
   }
 })();

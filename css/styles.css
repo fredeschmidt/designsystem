@@ -1,40 +1,40 @@
 
 
-/* ========== Type Token Overrides ========== */
-:root[data-type="type-1"] {
+/* ========== Theme Token Overrides ========== */
+:root[data-theme="theme-1"] {
+  /* Theme 1 — light, neutral */
+  --ds-bg: #ffffff;
+  --ds-fg: #111827;
+  --ds-muted: #6b7280;
+  --ds-border: #e5e7eb;
   --ds-primary: #2563eb;
   --ds-primary-hover: #1d4ed8;
-  --ds-bg: #ffffff;
-  --ds-fg: #111827;
-  --ds-header: #111827;
-  --ds-border: #e5e7eb;
   --ds-surface: #f9fafb;
   --ds-surface-2: #ffffff;
-  --ds-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
 }
 
-:root[data-type="type-2"] {
-  --ds-primary: #ff6565;
-  --ds-primary-hover: #ff6565;
-  --ds-bg: #ffffff;
-  --ds-fg: #111827;
-  --ds-header: #111827;
-  --ds-border: #f7ffcb;
-  --ds-surface: #f9fafb;
-  --ds-surface-2: #ffffff;
-  --ds-shadow: 0 2px 8px rgba(234,179,8,0.08);
+:root[data-theme="theme-2"] {
+  /* Theme 2 — inspired by attached palette (cream, dark blue, light blue, red, peach, pink) */
+  --ds-bg: #F2EEE9;      /* Cream */
+  --ds-fg: #0B1B2B;      /* Deep text (navy-ish) */
+  --ds-muted: #96ADD6;   /* Soft blue */
+  --ds-border: #F2D7D3;  /* Subtle pink border */
+  --ds-primary: #00408C; /* Dark Blue (brand) */
+  --ds-primary-hover: #96ADD6; /* Light blue hover */
+  --ds-surface: #FFF7F5; /* Warm surface (very light peach) */
+  --ds-surface-2: #FFFFFF; /* Card surface */
 }
 
-:root[data-type="type-3"] {
-  --ds-primary: #10b981;
-  --ds-primary-hover: #059669;
-  --ds-bg: #ffffff;
-  --ds-fg: #064e3b;
-  --ds-header: #111827;
-  --ds-border: #6ee7b7;
-  --ds-surface: #f9fafb;
-  --ds-surface-2: #ffffff;
-  --ds-shadow: 0 2px 8px rgba(16,185,129,0.08);
+:root[data-theme="theme-3"] {
+  /* Theme 3 — palette: Pink, Navy, Neon, Lilac (from attachment) */
+  --ds-bg: #D2C7FF;       /* Lilac background */
+  --ds-fg: #0D0D55;       /* Navy text */
+  --ds-muted: #FF99DC;    /* Pink muted */
+  --ds-border: #0D0D55;   /* Navy border */
+  --ds-primary: #D9F103;  /* Neon accent */
+  --ds-primary-hover: #FF99DC; /* Pink hover */
+  --ds-surface: #FFFFFF;  /* Card surface */
+  --ds-surface-2: #F6E8FF; /* Light lilac surface */
 }
 
 /* ========== Design Tokens (start her) ========== */

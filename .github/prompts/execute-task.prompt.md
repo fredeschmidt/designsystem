@@ -47,18 +47,20 @@ Use this prompt when the user writes: "Resolve this task with ID <asana-id>"
   - Include: title + demo + states/variants
 - Match Figma states/variants as closely as possible
 - css/styles.css:
-  - Type-specific styling is controlled by tokens (CSS custom properties)
-  - Type overrides in:
-    :root[data-type="type-1"], :root[data-type="type-2"], etc.
-- index.html must support switching types:
-  - main container has data-type attribute
-  - JS toggles active data-type so tokens update all components
+  - Theme-specific styling is controlled by tokens (CSS custom properties).
+  - Theme overrides must be implemented in `css/styles.css` using selectors such as:
+    :root[data-theme="theme-1"], :root[data-theme="theme-2"], :root[data-theme="theme-3"]
+  - `index.html` must support switching themes:
+    - the main container uses a `data-theme` attribute
+    - JS toggles the active `data-theme` value so token overrides update components globally
 - Only one CSS file per component (button.css, input.css, etc.)
 - When creating a component, always create its own stylesheet named for the component (for example `button.css`) and add an import statement for it at the top of `css/styles.css` so component styles are composed from the top-level stylesheet.
 - If the component requires JavaScript, create a `component-name.js` file and import it from `js/app.js` (add the import near the top of `js/app.js` so the component's script is included in the app bundle).
-- Do NOT create separate CSS per type (type differences must be tokens only)
-- Every time you add a new component, build and deliver it with three distinct visual states: `type-1`, `type-2`, and `type-3`.
-- The component demo in `index.html` must include examples for all three types (use the main container's `data-type` attribute to switch types), and ensure CSS tokens cover type differences rather than separate component files.
+ - Do NOT create separate component CSS files per theme; theme differences must be implemented with tokens only.
+ - Every component you add must automatically include token-driven styles for `theme-1`, `theme-2`, and `theme-3`.
+   - Implement these theme overrides in `css/styles.css` (see above).
+   - The component demo in `index.html` must include examples for all three themes (use the main container's `data-theme` attribute to switch themes).
+   - The component should not rely on multiple component files to represent theme differences; tokens must cover them.
 - Update docs/components/README.md
 - Update docs/decisions/README.md if relevant
  - Ensure HTML is semantically correct: use appropriate semantic elements, correct nesting, accessible landmarks, and valid ARIA where needed.
