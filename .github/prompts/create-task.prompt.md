@@ -41,7 +41,7 @@ Create a new Asana task (via Asana MCP) from the user's request and any Figma li
 5) Create task:
 - Project: AI PROJEKT (1213097315704457)
 - Status: Mangler
-- Title format: <AsanaTaskID> <human readable name> (use the exact Asana task ID assigned when the task is created)
+- Title format: ID-<AsanaTaskID> <human readable name> (use the exact Asana task ID assigned when the task is created)
 
 6) Fill `notes` with this template (plain text only):
 
@@ -72,7 +72,7 @@ Links:
 - PR template: .github/pull_request_template.md
 
 7) Create subtasks (always): Create these as subtasks under the newly created task (set the created task as the parent). Do NOT add these subtasks as project memberships—omit the project field when creating them so they appear only inside the parent task and do not show individually in the project task list.
-Do not ask the user for allowing to add these subtasks. Just do it.
+You don't need permission to create subtasks, just do it.
 - Docs
 - ADR (if needed)
 - Implementation
