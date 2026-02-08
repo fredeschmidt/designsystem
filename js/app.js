@@ -1,3 +1,5 @@
+import './checkbox.js';
+
 (function () {
   // Theme switcher
   const themeSwitcher = document.getElementById("themeSwitcher");

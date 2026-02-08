@@ -1,4 +1,4 @@
-
+@import "./checkbox.css";
 
 /* ========== Theme Token Overrides ========== */
 :root[data-theme="theme-1"] {
@@ -11,30 +11,51 @@
   --ds-primary-hover: #1d4ed8;
   --ds-surface: #f9fafb;
   --ds-surface-2: #ffffff;
+  --ds-radius: 12px;
+  --ds-border-size: 1px;
+  --ds-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
+  /* Checkbox: use standard --ds- tokens (Figma Dev Mode values are canonical for theme-1) */
+  --ds-checkbox-size: 24px;
+  --ds-radius-small: 2px;
+  --ds-error: #D42B2B;
 }
 
 :root[data-theme="theme-2"] {
-  /* Theme 2 — inspired by attached palette (cream, dark blue, light blue, red, peach, pink) */
-  --ds-bg: #F2EEE9;      /* Cream */
-  --ds-fg: #0B1B2B;      /* Deep text (navy-ish) */
-  --ds-muted: #96ADD6;   /* Soft blue */
-  --ds-border: #F2D7D3;  /* Subtle pink border */
-  --ds-primary: #00408C; /* Dark Blue (brand) */
-  --ds-primary-hover: #96ADD6; /* Light blue hover */
-  --ds-surface: #FFF7F5; /* Warm surface (very light peach) */
-  --ds-surface-2: #FFFFFF; /* Card surface */
+  /* Theme 2 — updated to match provided image palette (blue + orange + pink accents) */
+  --ds-bg: #F7F8FB;        /* light neutral background */
+  --ds-fg: #1726FF;        /* vivid royal blue for primary text/accent */
+  --ds-muted: #FFB3C1;     /* warm pink accent for muted elements */
+  --ds-border: #FF5A2E;    /* bold orange border/accent from image */
+  --ds-primary: #1726FF;   /* primary vivid blue */
+  --ds-primary-hover: #4A63FF;
+  --ds-surface: #FFFFFF;    /* white surface for cards/windows */
+  --ds-surface-2: #F7F8FB;  /* very light warm surface */
+  --ds-radius: 20px;
+  --ds-border-size: 2px;
+  --ds-shadow: 0;
+  /* Standard checkbox/token values (derived from this theme) */
+  --ds-checkbox-size: 24px;
+  --ds-radius-small: 5px;
+  --ds-error: #D42B2B;
 }
 
 :root[data-theme="theme-3"] {
-  /* Theme 3 — palette: Pink, Navy, Neon, Lilac (from attachment) */
-  --ds-bg: #D2C7FF;       /* Lilac background */
-  --ds-fg: #0D0D55;       /* Navy text */
-  --ds-muted: #FF99DC;    /* Pink muted */
-  --ds-border: #0D0D55;   /* Navy border */
-  --ds-primary: #D9F103;  /* Neon accent */
-  --ds-primary-hover: #FF99DC; /* Pink hover */
-  --ds-surface: #FFFFFF;  /* Card surface */
-  --ds-surface-2: #F6E8FF; /* Light lilac surface */
+  /* Theme 3 — updated to match provided image: black background with white text and bright accents */
+  --ds-bg: #0B0B0B;        /* near-black background */
+  --ds-fg: #FFFFFF;        /* white foreground (main text) */
+  --ds-muted: #BDBDBD;     /* neutral muted gray for secondary text */
+  --ds-border: #1F1F1F;    /* subtle dark border */
+  --ds-primary: #00E5FF;   /* bright cyan accent (figure/shape) */
+  --ds-primary-hover: #00C1D9;
+  --ds-surface: #0F0F0F;   /* very dark surface for cards */
+  --ds-surface-2: #0B0B0B; /* base surface (same as bg) */
+  --ds-radius: 6px;
+  --ds-border-size: 1px;
+  --ds-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  /* Standard checkbox/token values (derived from this theme) */
+  --ds-checkbox-size: 24px;
+  --ds-radius-small: 0px;
+  --ds-error: #D42B2B;
 }
 
 /* ========== Design Tokens (start her) ========== */
@@ -71,21 +92,22 @@ body {
 }
 
 .ds-header {
-  border-bottom: 1px solid var(--ds-border);
+  border-bottom: var(--ds-border-size) solid var(--ds-border);
   background: var(--ds-surface);
   color: var(--ds-header);
 }
 
 .ds-title { margin: 0; font-size: 28px; }
+h2 { margin: 0 0 20px; font-size: 22px; }
 .ds-subtitle { margin: 6px 0 0; color: var(--ds-muted); }
 
 .ds-stack { display: grid; gap: 16px; }
 
 .ds-card {
   background: var(--ds-surface-2);
-  border: 1px solid var(--ds-border);
+  border: var(--ds-border-size) solid var(--ds-border);
   border-radius: var(--ds-radius);
-  padding: 16px;
+  padding: 25px;
   box-shadow: var(--ds-shadow);
 }
 
