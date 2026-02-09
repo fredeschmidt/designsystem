@@ -41,7 +41,7 @@ Create a new Asana task (via Asana MCP) from the user's request and any Figma li
 5) Create task:
 - Project: AI PROJEKT (1213097315704457)
 - Status: Mangler
-- Title format: ID-<AsanaTaskID> <human readable name> (use the exact Asana task ID assigned when the task is created)
+- Title format: <human readable name> ID-<AsanaTaskID>(use the exact Asana task ID assigned when the task is created)
 
 6) Fill `notes` with this template (plain text only):
 
