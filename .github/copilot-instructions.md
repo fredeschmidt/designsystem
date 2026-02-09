@@ -1,6 +1,6 @@
 # Copilot Router (must follow)
-- If user asks to create an Asana task: use prompt ".github/prompts/create-task.prompt.md"
-- If user writes: "Resolve this task with ID ...": use prompt ".github/prompts/execute-task.prompt.md"
-- If user writes: "wrap up": use prompt ".github/prompts/wrap-up.prompt.md"
-- Always obey any "HARD RULES" in the selected prompt.
-- Canonical workflows live in ".github/prompts/*.prompt.md" (no skills folder).
+- If user asks to create an Asana task: use skill ".github/skills/create-task/SKILL.md"
+- If user writes: "Resolve this task with ID ...": use skill ".github/skills/execute-task/SKILL.md"
+- If user writes: "wrap up": use skill ".github/skills/wrap-up/SKILL.md"
+- Always obey any "HARD RULES" in the selected skill.
+- Canonical workflows live in ".github/skills/**/SKILL.md".
