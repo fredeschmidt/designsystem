@@ -7,7 +7,7 @@ description: Creates a fully specified Linear issue in the LETS GO team (Project
 Use the Create Issue skill to create a new Linear issue in the LETS GO team (Project: Design System) based on the user's request and any provided Figma link/screenshots. The skill will extract key details, classify the task type, discover the correct status/labels dynamically, and fill out the issue description with a structured template. It will also create sub-issues for each acceptance criterion if applicable. Finally, it will return the Linear issue identifier and direct link in the chat.
 
 ## Trigger   
-This runs when the user asks to create an issue, e.g. "Create an issue for this Figma design" or "Implement this design from Figma.". The user may optionally provide a Figma link and/or screenshots to help specify the task details.
+This runs when the user asks to create an issue, e.g. "Create an issue for this Figma design". The user may optionally provide a Figma link and/or screenshots to help specify the task details.
 
 ## HARD RULES (must follow)
 - Always create issues in Linear team: LETS GO (Project: Design System).

@@ -6,7 +6,6 @@
 | ------------------------------------ | -------------------- |
 | "Resolve this issue XX"              | ✅ Yes               |
 | "Execute this issue XX"              | ✅ Yes               |
-| "Implement this design from Figma"   | ❌ Use `create-issue`|
 
 ## Related Skills
 
