@@ -1,4 +1,4 @@
-AG# Execute Issue Skill
+# Execute Issue Skill
 
 ## Skill Routing
 
