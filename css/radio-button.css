@@ -1,0 +1,53 @@
+/* Radio button — tuned to match Figma Dev Mode visuals */
+
+.ds-radio {
+  appearance: none;
+  width: var(--ds-control-size);
+  height: var(--ds-control-size);
+  border: var(--ds-control-stroke) solid var(--ds-on-surface-variant);
+  border-radius: 999px;
+  background: transparent;
+  display: inline-grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: border-color .08s linear, box-shadow .12s ease;
+}
+
+.ds-radio::before {
+  content: "";
+  width: var(--ds-control-dot-size);
+  height: var(--ds-control-dot-size);
+  border-radius: 999px;
+  background: var(--ds-primary);
+  transform: scale(0);
+  transition: transform .08s linear, background-color .08s linear;
+}
+
+.ds-radio:checked {
+  border-color: var(--ds-primary);
+}
+
+.ds-radio:checked::before {
+  transform: scale(1);
+}
+
+.ds-radio:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--ds-primary) 20%, transparent);
+}
+
+.ds-radio:disabled {
+  cursor: not-allowed;
+  border-color: var(--ds-control-disabled);
+}
+
+.ds-radio:disabled::before {
+  background: var(--ds-control-disabled);
+}
+
+.ds-radio-list {
+  display: grid;
+  gap: var(--ds-space-3);
+}

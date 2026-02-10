@@ -42,7 +42,7 @@ This runs when the user asks to create an issue, e.g. "Create an issue for this 
   - change or tech debt → "Change"
 - If no matching label exists, create without label and note that in the response.
 
-5. Respond with [template](TEMPLATE.md) filled out with the extracted details and ask for confirmation before creating the issue in Linear. 
+5. Respond with [template](TEMPLATE.md) filled out with the extracted details and ask for confirmation before creating the issue in Linear. Preserve the emojis and formatting exactly as in the template.
 
 6. Create issue:
 - Team: LETS GO (Project: Design System)

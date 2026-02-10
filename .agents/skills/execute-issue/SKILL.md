@@ -55,7 +55,7 @@ If a component needs a new token (e.g., `--ds-error`, `--ds-focus`), add it to t
 #### HTML & Demo Structure
 - Add component demo in `<section class="ds-card">` inside `<main class="ds-container ds-stack">`
 - Include: title + demo + all states/variants (matching Figma)
-- Demo must display all three themes in one using the main container's `data-theme` attribute
+- Demo shows a single component instance; the “Skift tema” dropdown switches the main container’s `data-theme` between `theme-1`, `theme-2`, and `theme-3` to change the theme
 
 #### File Organization
 - Create one CSS file per component (button.css, checkbox.css, etc.)
