@@ -4,6 +4,7 @@
 
 | User Says                               | Use This Skill?           |
 | --------------------------------------- | ------------------------- |
+| "Implement this design from Figma"      | ✅ Yes                    |
 | "Create an issue for this Figma design" | ✅ Yes                    |
 | "Break down this feature"               | ✅ Yes                    |
 | "Create tasks for X"                    | ✅ Yes                    |

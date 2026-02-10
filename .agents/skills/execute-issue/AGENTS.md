@@ -4,7 +4,7 @@ AG# Execute Issue Skill
 
 | User Says                            | Use This Skill?      |
 | ------------------------------------ | -------------------- |
-| "Resolve this issue with ID XX"      | ✅ Yes               |
+| "Resolve this issue XX"              | ✅ Yes               |
 | "Execute this issue"                 | ✅ Yes               |
 | "Build this Linear project"          | ✅ Yes               |
 | "Implement the tasks in order"       | ✅ Yes               |
