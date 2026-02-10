@@ -1,7 +1,5 @@
 # Components
 ...existing code...
-- [Checkbox](checkbox.md): Checkbox component supporting checked, indeterminate, and unchecked states, with and without background circles.
-- [Radio Button](radio.md): Radio button component with enabled/disabled selected and unselected states.
 - [Switches Without Icons](SwitchesWithoutIcons.md): Switch component without icons, with four Figma variants.
 
 Her ligger korte beskrivelser af vores komponenter.
