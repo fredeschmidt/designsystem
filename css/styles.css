@@ -1,5 +1,6 @@
 @import "./checkbox.css";
 @import "./radio.css";
+@import "./switches-without-icons.css";
 
 /* ========== Theme Token Overrides ========== */
 :root[data-theme="theme-1"] {
@@ -25,6 +26,21 @@
   --ds-control-size: 24px;
   --ds-control-stroke: 2px;
   --ds-control-dot-size: 10px;
+  /* Switch/control tokens (Figma Dev Mode values are canonical for theme-1) */
+  --ds-outline: #1C1616;
+  --ds-outline-variant: rgba(31,31,31,0.12);
+  --ds-surface-variant: #B3B1B1;
+  --ds-surface-variant-soft: rgba(179,177,177,0.12);
+  --ds-surface-subtle: #E8E8E8;
+  --ds-inverse-surface: #1F1F1F;
+  --ds-on-inverse: #FFFFFF;
+  --ds-on-primary: #FFFFFF;
+  --ds-control-track-width: 52px;
+  --ds-control-track-height: 32px;
+  --ds-control-track-radius: 36px;
+  --ds-control-padding-x: 6px;
+  --ds-control-padding-y: 4px;
+  --ds-control-thumb-size: 24px;
 }
 
 :root[data-theme="theme-2"] {
@@ -50,6 +66,21 @@
   --ds-control-size: 30px;
   --ds-control-stroke: 2px;
   --ds-control-dot-size: 15px;
+  /* Switch/control tokens (derived from theme-2) */
+  --ds-outline: var(--ds-border);
+  --ds-outline-variant: color-mix(in srgb, var(--ds-border) 12%, transparent);
+  --ds-surface-variant: var(--ds-muted);
+  --ds-surface-variant-soft: color-mix(in srgb, var(--ds-muted) 12%, transparent);
+  --ds-surface-subtle: var(--ds-surface);
+  --ds-inverse-surface: #1F1F1F;
+  --ds-on-inverse: #FFFFFF;
+  --ds-on-primary: #FFFFFF;
+  --ds-control-track-width: 52px;
+  --ds-control-track-height: 32px;
+  --ds-control-track-radius: 36px;
+  --ds-control-padding-x: 6px;
+  --ds-control-padding-y: 4px;
+  --ds-control-thumb-size: 24px;
 }
 
 :root[data-theme="theme-3"] {
@@ -75,6 +106,21 @@
   --ds-control-size: 30px;
   --ds-control-stroke: 4px;
   --ds-control-dot-size: 10px;
+  /* Switch/control tokens (derived from theme-3) */
+  --ds-outline: var(--ds-border);
+  --ds-outline-variant: color-mix(in srgb, var(--ds-border) 12%, transparent);
+  --ds-surface-variant: #B3B1B1;
+  --ds-surface-variant-soft: color-mix(in srgb, #B3B1B1 12%, transparent);
+  --ds-surface-subtle: var(--ds-surface);
+  --ds-inverse-surface: #1F1F1F;
+  --ds-on-inverse: #FFFFFF;
+  --ds-on-primary: #FFFFFF;
+  --ds-control-track-width: 52px;
+  --ds-control-track-height: 32px;
+  --ds-control-track-radius: 36px;
+  --ds-control-padding-x: 6px;
+  --ds-control-padding-y: 4px;
+  --ds-control-thumb-size: 24px;
 }
 
 /* ========== Design Tokens (start her) ========== */
@@ -96,6 +142,20 @@
   --ds-control-size: 40px;
   --ds-control-stroke: 3px;
   --ds-control-dot-size: 20px;
+  --ds-outline: #1C1616;
+  --ds-outline-variant: rgba(31,31,31,0.12);
+  --ds-surface-variant: #B3B1B1;
+  --ds-surface-variant-soft: rgba(179,177,177,0.12);
+  --ds-surface-subtle: #E8E8E8;
+  --ds-inverse-surface: #1F1F1F;
+  --ds-on-inverse: #FFFFFF;
+  --ds-on-primary: #FFFFFF;
+  --ds-control-track-width: 52px;
+  --ds-control-track-height: 32px;
+  --ds-control-track-radius: 36px;
+  --ds-control-padding-x: 6px;
+  --ds-control-padding-y: 4px;
+  --ds-control-thumb-size: 24px;
 }
 
 /* ========== Base ========== */
@@ -136,6 +196,5 @@ h2 { margin: 0 0 20px; font-size: 22px; }
 }
 
 .ds-row { display: flex; gap: 10px; flex-wrap: wrap; }
-
 
 

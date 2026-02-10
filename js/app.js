@@ -1,4 +1,5 @@
 import './checkbox.js';
+import './switch.js';
 
 (function () {
   // Theme switcher

@@ -1,0 +1,73 @@
+/* Switches without icons — tuned to match Figma Dev Mode visuals */
+
+.ds-switch {
+  --switch-track-bg: var(--ds-surface-variant);
+  --switch-track-border: var(--ds-outline);
+  --switch-track-border-width: 2px;
+  --switch-thumb-bg: var(--ds-outline);
+  appearance: none;
+  border: var(--switch-track-border-width) solid var(--switch-track-border);
+  background: var(--switch-track-bg);
+  border-radius: var(--ds-control-track-radius);
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--ds-control-padding-y) var(--ds-control-padding-x);
+  width: var(--ds-control-track-width);
+  height: var(--ds-control-track-height);
+  cursor: pointer;
+  line-height: 0;
+  transition: background .08s linear, border-color .08s linear, box-shadow .12s ease;
+}
+
+.ds-switch__thumb {
+  width: var(--ds-control-thumb-size);
+  height: var(--ds-control-thumb-size);
+  border-radius: 999px;
+  background: var(--switch-thumb-bg);
+  display: block;
+}
+
+.ds-switch[data-checked="true"] {
+  justify-content: flex-end;
+}
+
+.ds-switch:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--ds-primary) 20%, transparent);
+}
+
+.ds-switch[aria-disabled="true"],
+.ds-switch[data-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.ds-switch--default {
+  --switch-track-bg: var(--ds-surface-variant);
+  --switch-track-border: var(--ds-outline);
+  --switch-track-border-width: 2px;
+  --switch-thumb-bg: var(--ds-outline);
+}
+
+.ds-switch--primary {
+  --switch-track-bg: var(--ds-primary);
+  --switch-track-border: transparent;
+  --switch-track-border-width: 0;
+  --switch-thumb-bg: var(--ds-on-primary);
+}
+
+.ds-switch--soft {
+  --switch-track-bg: var(--ds-surface-variant-soft);
+  --switch-track-border: var(--ds-outline-variant);
+  --switch-track-border-width: 2px;
+  --switch-thumb-bg: var(--ds-surface-variant);
+}
+
+.ds-switch--inverse {
+  --switch-track-bg: var(--ds-inverse-surface);
+  --switch-track-border: transparent;
+  --switch-track-border-width: 0;
+  --switch-thumb-bg: var(--ds-on-inverse);
+}
