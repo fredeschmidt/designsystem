@@ -67,6 +67,9 @@ If a component needs a new token (e.g., `--ds-error`, `--ds-focus`), add it to t
 - All styling uses CSS custom properties (tokens prefixed with `--ds-`)
 - Do NOT use `--cb-` or component-specific token prefixes
 - Figma Dev Mode values map to theme-1 tokens
+- Theme overrides should only set tokens that differ from base `:root`
+- Reuse existing tokens for identical values (e.g., `--ds-on-primary: var(--ds-on-inverse)`), avoid duplicate literals
+- Keep base tokens organized by category (typography, colors, surfaces, effects, spacing, radii, controls, layout sizes, component-specific groups) for readability
 - Theme overrides for theme-2 and theme-3 are implemented in `css/styles.css` using:
   ```css
   :root[data-theme="theme-1"] { --ds-primary: ...; }
