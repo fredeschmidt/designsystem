@@ -6,56 +6,26 @@
 /* ========== Theme Token Overrides ========== */
 :root[data-theme="theme-1"] {
   /* Theme 1 — light, neutral */
-  --ds-bg: #ffffff;
-  --ds-fg: #111827;
-  --ds-muted: #6b7280;
-  --ds-border: #e5e7eb;
   --ds-primary: #6750A4;
   --ds-primary-hover: #5E43A5;
   --ds-surface: #FEF7FF;
-  --ds-surface-2: #FEF7FF;
-  --ds-radius: 12px;
-  --ds-border-size: 1px;
-  --ds-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
-  --ds-elevation-1: 0 1px 2px rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+  --ds-surface-2: var(--ds-surface);
   /* Switch/control tokens (Figma Dev Mode values are canonical for theme-1) */
-  --ds-outline: #1C1616;
   --ds-outline-variant: #CAC4D0;
   --ds-surface-variant: #49454F;
   --ds-surface-variant-soft: rgba(73,69,79,0.12);
   --ds-surface-subtle: #F7F2FA;
-  --ds-inverse-surface: #1F1F1F;
-  --ds-on-inverse: #FFFFFF;
-  --ds-on-primary: #FFFFFF;
-  --ds-on-surface-variant: #49454F;
-  --ds-on-surface: #1D1B20;
-  --ds-primary-container: #EADDFF;
-  --ds-on-primary-container: #4F378A;
-  --ds-surface-container-low: #F7F2FA;
-  --ds-surface-container-high: #ECE6F0;
-  --ds-surface-container-highest: #E6E0E9;
-  --ds-media-placeholder: #ECE6F0;
-  --ds-focus-ring: #6750A4;
-  --ds-focus-ring-size: 3px;
-  --ds-control-disabled: rgba(31,31,31,0.38);
-  --ds-control-track-width: 52px;
-  --ds-control-track-height: 32px;
-  --ds-control-track-radius: 36px;
-  --ds-control-padding-x: 6px;
-  --ds-control-padding-y: 4px;
-  --ds-control-thumb-size: 24px;
+  --ds-on-surface-variant: var(--ds-surface-variant);
 }
 
 :root[data-theme="theme-2"] {
   /* Theme 2 — updated to match provided image palette (blue + orange + pink accents) */
-  --ds-bg: #ffffff;        /* light neutral background */
   --ds-fg: #1726FF;        /* vivid royal blue for primary text/accent */
   --ds-muted: #FFB3C1;     /* warm pink accent for muted elements */
   --ds-border: #FF5A2E;    /* bold orange border/accent from image */
   --ds-primary: #1726FF;   /* primary vivid blue */
   --ds-primary-hover: #4A63FF;
   --ds-surface: #ffffff;    /* white surface for cards/windows */
-  --ds-surface-2: #ffffff;  /* very light warm surface */
   --ds-radius: 20px;
   --ds-border-size: 3px;
   --ds-shadow: 0;
@@ -66,9 +36,6 @@
   --ds-surface-variant: var(--ds-muted);
   --ds-surface-variant-soft: color-mix(in srgb, var(--ds-muted) 12%, transparent);
   --ds-surface-subtle: var(--ds-surface);
-  --ds-inverse-surface: #1F1F1F;
-  --ds-on-inverse: #FFFFFF;
-  --ds-on-primary: #FFFFFF;
   --ds-on-surface-variant: var(--ds-fg);
   --ds-on-surface: #111111;
   --ds-primary-container: #E7E2FF;
@@ -76,41 +43,28 @@
   --ds-surface-container-low: #FFF7F5;
   --ds-surface-container-high: #FFEFEA;
   --ds-surface-container-highest: #FFE6DB;
-  --ds-media-placeholder: #FFEFEA;
-  --ds-focus-ring: var(--ds-primary);
-  --ds-focus-ring-size: 3px;
+  --ds-media-placeholder: var(--ds-surface-container-high);
   --ds-control-disabled: color-mix(in srgb, var(--ds-fg) 38%, transparent);
-  --ds-control-track-width: 52px;
-  --ds-control-track-height: 32px;
-  --ds-control-track-radius: 36px;
-  --ds-control-padding-x: 6px;
-  --ds-control-padding-y: 4px;
-  --ds-control-thumb-size: 24px;
+  --ds-focus-ring: var(--ds-primary);
 }
 
 :root[data-theme="theme-3"] {
   /* Theme 3 — updated to match provided image: black background with white text and bright accents */
-  --ds-bg: #0B0B0B;        /* near-black background */
+  --ds-bg: #212121;        /* near-black background */
   --ds-fg: #FFFFFF;        /* white foreground (main text) */
   --ds-muted: #BDBDBD;     /* neutral muted gray for secondary text */
   --ds-border: #1F1F1F;    /* subtle dark border */
   --ds-primary: #00E5FF;   /* bright cyan accent (figure/shape) */
   --ds-primary-hover: #00C1D9;
   --ds-surface: #0F0F0F;   /* very dark surface for cards */
-  --ds-surface-2: #0B0B0B; /* base surface (same as bg) */
+  --ds-surface-2: var(--ds-bg); /* base surface (same as bg) */
   --ds-radius: 6px;
-  --ds-border-size: 1px;
   --ds-shadow: 0 8px 24px rgba(0,0,0,0.7);
   --ds-elevation-1: 0 10px 24px rgba(0,0,0,0.7);
   /* Switch/control tokens (derived from theme-3) */
   --ds-outline: var(--ds-border);
   --ds-outline-variant: color-mix(in srgb, var(--ds-border) 12%, transparent);
-  --ds-surface-variant: #B3B1B1;
-  --ds-surface-variant-soft: color-mix(in srgb, #B3B1B1 12%, transparent);
   --ds-surface-subtle: var(--ds-surface);
-  --ds-inverse-surface: #1F1F1F;
-  --ds-on-inverse: #FFFFFF;
-  --ds-on-primary: #FFFFFF;
   --ds-on-surface-variant: var(--ds-fg);
   --ds-on-surface: #FFFFFF;
   --ds-primary-container: #0B1C24;
@@ -118,16 +72,9 @@
   --ds-surface-container-low: #121212;
   --ds-surface-container-high: #1A1A1A;
   --ds-surface-container-highest: #222222;
-  --ds-media-placeholder: #1A1A1A;
-  --ds-focus-ring: #00E5FF;
-  --ds-focus-ring-size: 3px;
+  --ds-media-placeholder: var(--ds-surface-container-high);
+  --ds-focus-ring: var(--ds-primary);
   --ds-control-disabled: color-mix(in srgb, var(--ds-fg) 38%, transparent);
-  --ds-control-track-width: 52px;
-  --ds-control-track-height: 32px;
-  --ds-control-track-radius: 36px;
-  --ds-control-padding-x: 6px;
-  --ds-control-padding-y: 4px;
-  --ds-control-thumb-size: 24px;
 }
 
 /* ========== Design Tokens (start her) ========== */
@@ -252,7 +199,7 @@ body {
   color: var(--ds-header);
 }
 
-.ds-title { margin: 0; font-size: 35px; }
+.ds-title { margin: 0; font-size: 40px; }
 h2 { margin: 0 0 20px; font-size: 22px; }
 .ds-subtitle { margin: 6px 0 0; color: var(--ds-muted); }
 
