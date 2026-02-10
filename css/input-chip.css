@@ -1,0 +1,220 @@
+.ds-chip-section {
+  display: grid;
+  gap: var(--ds-space-16);
+}
+
+.ds-chip-grid {
+  display: grid;
+  grid-template-columns: var(--ds-size-140) repeat(6, minmax(var(--ds-size-120), 1fr));
+  gap: var(--ds-space-12) var(--ds-space-16);
+  align-items: center;
+}
+
+.ds-chip-grid__label {
+  font-size: var(--ds-body-medium-size);
+  color: var(--ds-on-surface-variant);
+}
+
+.ds-chip-grid__header {
+  font-size: var(--ds-body-medium-size);
+  font-weight: var(--ds-body-medium-weight);
+  color: var(--ds-on-surface-variant);
+}
+
+.ds-chip {
+  --ds-chip-height: var(--ds-control-track-height);
+  --ds-chip-radius-base: var(--ds-media-shape-radius);
+  --ds-chip-radius-avatar: var(--ds-radius-30);
+  --ds-chip-gap: var(--ds-space-8);
+  --ds-chip-pad-y: var(--ds-space-6);
+  --ds-chip-pad-x: var(--ds-space-12);
+  --ds-chip-pad-x-compact: var(--ds-space-8);
+  --ds-chip-pad-x-icon: var(--ds-space-8);
+  --ds-chip-pad-x-icon-end: var(--ds-space-12);
+  --ds-chip-pad-x-avatar: var(--ds-space-4);
+  --ds-chip-pad-x-avatar-end: var(--ds-space-12);
+  --ds-chip-pad-x-avatar-compact: var(--ds-space-8);
+  --ds-chip-pad-y-avatar: var(--ds-space-4);
+  --ds-chip-label-color: var(--ds-on-surface-variant);
+  --ds-chip-icon-color: var(--ds-on-surface-variant);
+  --ds-chip-bg: transparent;
+  --ds-chip-border: var(--ds-outline-variant);
+  --ds-chip-state-layer: transparent;
+  --ds-chip-elevation: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--ds-chip-height);
+  padding: 0;
+  border-radius: var(--ds-chip-radius-base);
+  border: var(--ds-border-size) solid var(--ds-chip-border);
+  background: var(--ds-chip-bg);
+  color: var(--ds-chip-label-color);
+  font-family: var(--ds-font-label);
+  font-size: var(--ds-label-large-size);
+  line-height: var(--ds-label-large-line);
+  letter-spacing: var(--ds-label-large-track);
+  font-weight: var(--ds-label-large-weight);
+  cursor: pointer;
+  box-shadow: var(--ds-chip-elevation);
+  text-align: center;
+}
+
+.ds-chip--avatar {
+  border-radius: var(--ds-chip-radius-avatar);
+}
+
+.ds-chip[data-selected="true"] {
+  --ds-chip-bg: var(--ds-secondary-container);
+  --ds-chip-border: transparent;
+  --ds-chip-label-color: var(--ds-on-secondary-container);
+  --ds-chip-icon-color: var(--ds-on-secondary-container);
+}
+
+.ds-chip[data-selected="false"] {
+  --ds-chip-bg: transparent;
+  --ds-chip-border: var(--ds-outline-variant);
+  --ds-chip-label-color: var(--ds-on-surface-variant);
+  --ds-chip-icon-color: var(--ds-on-surface-variant);
+}
+
+.ds-chip[data-state="hovered"][data-selected="false"],
+.ds-chip[data-state="focused"][data-selected="false"],
+.ds-chip[data-state="dragged"][data-selected="false"] {
+  --ds-chip-bg: var(--ds-surface);
+}
+
+.ds-chip[data-state="dragged"] {
+  --ds-chip-elevation: var(--ds-elevation-3);
+}
+
+.ds-chip[data-state="hovered"] {
+  --ds-chip-state-layer: var(--ds-state-on-surface-variant-08);
+}
+
+.ds-chip[data-state="focused"] {
+  --ds-chip-state-layer: var(--ds-state-on-surface-variant-10);
+}
+
+.ds-chip[data-state="dragged"] {
+  --ds-chip-state-layer: var(--ds-state-on-surface-16);
+}
+
+.ds-chip[data-state="hovered"][data-selected="true"] {
+  --ds-chip-state-layer: var(--ds-state-on-secondary-container-08);
+}
+
+.ds-chip[data-state="focused"][data-selected="true"] {
+  --ds-chip-state-layer: var(--ds-state-on-secondary-container-10);
+}
+
+.ds-chip[data-state="dragged"][data-selected="true"] {
+  --ds-chip-state-layer: var(--ds-state-on-secondary-container-16);
+}
+
+.ds-chip[data-state="focused"]::after {
+  content: "";
+  position: absolute;
+  inset: var(--ds-focus-inset-unselected);
+  border: var(--ds-focus-ring-size) solid var(--ds-secondary);
+  border-radius: var(--ds-focus-indicator-radius);
+  pointer-events: none;
+}
+
+.ds-chip[data-state="focused"][data-selected="true"]::after {
+  inset: var(--ds-focus-inset-selected);
+}
+
+.ds-chip__body {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--ds-chip-state-layer);
+  color: inherit;
+}
+
+.ds-chip--label .ds-chip__body {
+  padding: var(--ds-chip-pad-y) var(--ds-chip-pad-x);
+}
+
+.ds-chip--label[data-close="true"] .ds-chip__body {
+  gap: var(--ds-chip-gap);
+  padding: var(--ds-chip-pad-y) var(--ds-chip-pad-x-compact) var(--ds-chip-pad-y) var(--ds-chip-pad-x);
+}
+
+.ds-chip--leading-icon .ds-chip__body {
+  gap: var(--ds-chip-gap);
+  padding: var(--ds-chip-pad-y) var(--ds-chip-pad-x-icon-end) var(--ds-chip-pad-y) var(--ds-chip-pad-x-icon);
+}
+
+.ds-chip--leading-icon[data-close="true"] .ds-chip__body {
+  padding: var(--ds-chip-pad-y) var(--ds-chip-pad-x-compact);
+}
+
+.ds-chip--avatar .ds-chip__body {
+  gap: var(--ds-chip-gap);
+  padding: var(--ds-chip-pad-y-avatar) var(--ds-chip-pad-x-avatar-end) var(--ds-chip-pad-y-avatar) var(--ds-chip-pad-x-avatar);
+}
+
+.ds-chip--avatar[data-close="true"] .ds-chip__body {
+  padding: var(--ds-chip-pad-y-avatar) var(--ds-chip-pad-x-avatar-compact);
+}
+
+.ds-chip__label {
+  white-space: nowrap;
+  font-variation-settings: "wdth" 100;
+}
+
+.ds-chip__icon,
+.ds-chip__close {
+  width: var(--ds-icon-size);
+  height: var(--ds-icon-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-chip-icon-color);
+}
+
+.ds-chip__icon svg,
+.ds-chip__close svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.ds-chip__avatar {
+  width: var(--ds-avatar-size);
+  height: var(--ds-avatar-size);
+  border-radius: var(--ds-button-radius);
+  display: inline-grid;
+  place-items: center;
+  background: var(--ds-primary-container);
+  color: var(--ds-on-primary-container);
+  flex: 0 0 auto;
+}
+
+.ds-chip[data-selected="true"] .ds-chip__avatar {
+  background: var(--ds-on-secondary-container);
+  color: var(--ds-on-secondary);
+}
+
+.ds-chip__avatar svg {
+  width: var(--ds-icon-size);
+  height: var(--ds-icon-size);
+  fill: currentColor;
+}
+
+.ds-chip__avatar-icon--check {
+  display: none;
+}
+
+.ds-chip[data-selected="true"] .ds-chip__avatar-icon--person {
+  display: none;
+}
+
+.ds-chip[data-selected="true"] .ds-chip__avatar-icon--check {
+  display: block;
+}

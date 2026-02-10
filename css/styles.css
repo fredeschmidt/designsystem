@@ -2,20 +2,35 @@
 @import "./switches-without-icons.css";
 @import "./radio-button.css";
 @import "./stacked-card.css";
+@import "./input-chip.css";
 
 /* ========== Theme Token Overrides ========== */
 :root[data-theme="theme-1"] {
   /* Theme 1 — light, neutral */
   --ds-primary: #6750A4;
   --ds-primary-hover: #5E43A5;
+  --ds-secondary: #625B71;
   --ds-surface: #FEF7FF;
   --ds-surface-2: var(--ds-surface);
+  --ds-on-primary: #FFFFFF;
+  --ds-on-secondary: #FFFFFF;
+  --ds-secondary-container: #E8DEF8;
+  --ds-on-secondary-container: #4A4459;
+  --ds-primary-container: #EADDFF;
+  --ds-on-primary-container: #4F378A;
   /* Switch/control tokens (Figma Dev Mode values are canonical for theme-1) */
   --ds-outline-variant: #CAC4D0;
   --ds-surface-variant: #49454F;
   --ds-surface-variant-soft: rgba(73,69,79,0.12);
   --ds-surface-subtle: #F7F2FA;
   --ds-on-surface-variant: var(--ds-surface-variant);
+  --ds-state-on-surface-variant-08: rgba(73,69,79,0.08);
+  --ds-state-on-surface-variant-10: rgba(73,69,79,0.10);
+  --ds-state-on-surface-16: rgba(29,27,32,0.16);
+  --ds-state-on-secondary-container-08: rgba(74,68,89,0.08);
+  --ds-state-on-secondary-container-10: rgba(74,68,89,0.10);
+  --ds-state-on-secondary-container-16: rgba(74,68,89,0.16);
+  --ds-elevation-3: 0 1px 3px rgba(0,0,0,0.3), 0 4px 8px 3px rgba(0,0,0,0.15);
 }
 
 :root[data-theme="theme-2"] {
@@ -40,12 +55,23 @@
   --ds-on-surface: #111111;
   --ds-primary-container: #E7E2FF;
   --ds-on-primary-container: #1F1599;
+  --ds-secondary: color-mix(in srgb, var(--ds-primary) 70%, #000 30%);
+  --ds-on-secondary: #FFFFFF;
+  --ds-secondary-container: color-mix(in srgb, var(--ds-primary) 15%, #FFFFFF 85%);
+  --ds-on-secondary-container: color-mix(in srgb, var(--ds-primary) 70%, #000 30%);
   --ds-surface-container-low: #FFF7F5;
   --ds-surface-container-high: #FFEFEA;
   --ds-surface-container-highest: #FFE6DB;
   --ds-media-placeholder: var(--ds-surface-container-high);
   --ds-control-disabled: color-mix(in srgb, var(--ds-fg) 38%, transparent);
   --ds-focus-ring: var(--ds-primary);
+  --ds-state-on-surface-variant-08: color-mix(in srgb, var(--ds-on-surface-variant) 8%, transparent);
+  --ds-state-on-surface-variant-10: color-mix(in srgb, var(--ds-on-surface-variant) 10%, transparent);
+  --ds-state-on-surface-16: color-mix(in srgb, var(--ds-on-surface) 16%, transparent);
+  --ds-state-on-secondary-container-08: color-mix(in srgb, var(--ds-on-secondary-container) 8%, transparent);
+  --ds-state-on-secondary-container-10: color-mix(in srgb, var(--ds-on-secondary-container) 10%, transparent);
+  --ds-state-on-secondary-container-16: color-mix(in srgb, var(--ds-on-secondary-container) 16%, transparent);
+  --ds-elevation-3: 0 6px 18px rgba(0,0,0,0.18);
 }
 
 :root[data-theme="theme-3"] {
@@ -69,12 +95,23 @@
   --ds-on-surface: #FFFFFF;
   --ds-primary-container: #0B1C24;
   --ds-on-primary-container: #9BE8FF;
+  --ds-secondary: #5C5C5C;
+  --ds-on-secondary: #FFFFFF;
+  --ds-secondary-container: #2A2A2A;
+  --ds-on-secondary-container: #E0E0E0;
   --ds-surface-container-low: #121212;
   --ds-surface-container-high: #1A1A1A;
   --ds-surface-container-highest: #222222;
   --ds-media-placeholder: var(--ds-surface-container-high);
   --ds-focus-ring: var(--ds-primary);
   --ds-control-disabled: color-mix(in srgb, var(--ds-fg) 38%, transparent);
+  --ds-state-on-surface-variant-08: color-mix(in srgb, var(--ds-on-surface-variant) 8%, transparent);
+  --ds-state-on-surface-variant-10: color-mix(in srgb, var(--ds-on-surface-variant) 10%, transparent);
+  --ds-state-on-surface-16: color-mix(in srgb, var(--ds-on-surface) 16%, transparent);
+  --ds-state-on-secondary-container-08: color-mix(in srgb, var(--ds-on-secondary-container) 8%, transparent);
+  --ds-state-on-secondary-container-10: color-mix(in srgb, var(--ds-on-secondary-container) 10%, transparent);
+  --ds-state-on-secondary-container-16: color-mix(in srgb, var(--ds-on-secondary-container) 16%, transparent);
+  --ds-elevation-3: 0 10px 24px rgba(0,0,0,0.7);
 }
 
 /* ========== Design Tokens (start her) ========== */
@@ -113,6 +150,7 @@
   --ds-border-size: 1px;
   --ds-primary: #0375D2;
   --ds-primary-hover: #1d4ed8;
+  --ds-secondary: #5F5F5F;
 
   /* Surfaces and variants */
   --ds-surface: #f9fafb;
@@ -129,12 +167,15 @@
   /* On colors */
   --ds-on-inverse: #FFFFFF;
   --ds-on-primary: var(--ds-on-inverse);
+  --ds-on-secondary: var(--ds-on-inverse);
   --ds-on-surface: #1D1B20;
   --ds-on-surface-variant: #130F0F;
 
   /* Containers */
   --ds-primary-container: #EADDFF;
   --ds-on-primary-container: #4F378A;
+  --ds-secondary-container: #E8DEF8;
+  --ds-on-secondary-container: #4A4459;
 
   /* Borders and outlines */
   --ds-outline: #1C1616;
@@ -143,13 +184,18 @@
   /* Effects */
   --ds-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
   --ds-elevation-1: 0 1px 2px rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+  --ds-elevation-3: 0 1px 3px rgba(0,0,0,0.3), 0 4px 8px 3px rgba(0,0,0,0.15);
   --ds-focus-ring: #6750A4;
   --ds-focus-ring-size: 3px;
   --ds-focus-ring-opacity: 40%;
   --ds-control-disabled: rgba(31,31,31,0.38);
+  --ds-focus-indicator-radius: 2px;
+  --ds-focus-inset-selected: -2px;
+  --ds-focus-inset-unselected: -3px;
 
   /* Spacing */
   --ds-space-4: 4px;
+  --ds-space-6: 6px;
   --ds-space-8: 8px;
   --ds-space-12: 12px;
   --ds-space-16: 16px;
@@ -158,6 +204,7 @@
 
   /* Radii */
   --ds-radius: 12px;
+  --ds-radius-30: 30px;
   --ds-button-radius: 100px;
   --ds-slot-radius: 16px;
   --ds-media-shape-radius: 8px;
@@ -179,6 +226,8 @@
   --ds-icon-button-size: 40px;
   --ds-action-row-height: 40px;
   --ds-button-height: 48px;
+  --ds-size-120: 120px;
+  --ds-size-140: 140px;
 
   /* Stacked card */
   --ds-stacked-card-width: 360px;
@@ -202,6 +251,13 @@
   --ds-slot-pattern-strength: 35%;
   --ds-media-shape-strength: 35%;
   --ds-slot-content-max-width: 240px;
+
+  --ds-state-on-surface-variant-08: color-mix(in srgb, var(--ds-on-surface-variant) 8%, transparent);
+  --ds-state-on-surface-variant-10: color-mix(in srgb, var(--ds-on-surface-variant) 10%, transparent);
+  --ds-state-on-surface-16: color-mix(in srgb, var(--ds-on-surface) 16%, transparent);
+  --ds-state-on-secondary-container-08: color-mix(in srgb, var(--ds-on-secondary-container) 8%, transparent);
+  --ds-state-on-secondary-container-10: color-mix(in srgb, var(--ds-on-secondary-container) 10%, transparent);
+  --ds-state-on-secondary-container-16: color-mix(in srgb, var(--ds-on-secondary-container) 16%, transparent);
 }
 
 /* ========== Base ========== */

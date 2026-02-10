@@ -47,6 +47,603 @@
         </div>
       </section>
 
+      <section class="ds-card ds-chip-section">
+        <h2>Input Chip (M3)</h2>
+        <div class="ds-chip-grid" aria-label="Input chip state matrix">
+          <div class="ds-chip-grid__header" aria-hidden="true"></div>
+          <div class="ds-chip-grid__header">Label only</div>
+          <div class="ds-chip-grid__header">Label + close</div>
+          <div class="ds-chip-grid__header">Leading icon</div>
+          <div class="ds-chip-grid__header">Leading + close</div>
+          <div class="ds-chip-grid__header">Avatar</div>
+          <div class="ds-chip-grid__header">Avatar + close</div>
+
+          <div class="ds-chip-grid__label">Enabled · Unselected</div>
+          <button class="ds-chip ds-chip--label" type="button" data-state="enabled" data-selected="false" data-close="false" aria-label="Enabled unselected label chip">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--label" type="button" data-state="enabled" data-selected="false" data-close="true" aria-label="Enabled unselected label chip with close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="enabled" data-selected="false" data-close="false" aria-label="Enabled unselected chip with leading icon">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="enabled" data-selected="false" data-close="true" aria-label="Enabled unselected chip with leading icon and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="enabled" data-selected="false" data-close="false" aria-label="Enabled unselected chip with avatar">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="enabled" data-selected="false" data-close="true" aria-label="Enabled unselected chip with avatar and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <div class="ds-chip-grid__label">Enabled · Selected</div>
+          <button class="ds-chip ds-chip--label" type="button" data-state="enabled" data-selected="true" data-close="false" aria-label="Enabled selected label chip">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--label" type="button" data-state="enabled" data-selected="true" data-close="true" aria-label="Enabled selected label chip with close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="enabled" data-selected="true" data-close="false" aria-label="Enabled selected chip with leading icon">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="enabled" data-selected="true" data-close="true" aria-label="Enabled selected chip with leading icon and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="enabled" data-selected="true" data-close="false" aria-label="Enabled selected chip with avatar">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="enabled" data-selected="true" data-close="true" aria-label="Enabled selected chip with avatar and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <div class="ds-chip-grid__label">Hovered · Unselected</div>
+          <button class="ds-chip ds-chip--label" type="button" data-state="hovered" data-selected="false" data-close="false" aria-label="Hovered unselected label chip">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--label" type="button" data-state="hovered" data-selected="false" data-close="true" aria-label="Hovered unselected label chip with close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="hovered" data-selected="false" data-close="false" aria-label="Hovered unselected chip with leading icon">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="hovered" data-selected="false" data-close="true" aria-label="Hovered unselected chip with leading icon and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="hovered" data-selected="false" data-close="false" aria-label="Hovered unselected chip with avatar">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="hovered" data-selected="false" data-close="true" aria-label="Hovered unselected chip with avatar and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <div class="ds-chip-grid__label">Hovered · Selected</div>
+          <button class="ds-chip ds-chip--label" type="button" data-state="hovered" data-selected="true" data-close="false" aria-label="Hovered selected label chip">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--label" type="button" data-state="hovered" data-selected="true" data-close="true" aria-label="Hovered selected label chip with close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="hovered" data-selected="true" data-close="false" aria-label="Hovered selected chip with leading icon">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="hovered" data-selected="true" data-close="true" aria-label="Hovered selected chip with leading icon and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="hovered" data-selected="true" data-close="false" aria-label="Hovered selected chip with avatar">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="hovered" data-selected="true" data-close="true" aria-label="Hovered selected chip with avatar and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <div class="ds-chip-grid__label">Focused · Unselected</div>
+          <button class="ds-chip ds-chip--label" type="button" data-state="focused" data-selected="false" data-close="false" aria-label="Focused unselected label chip">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--label" type="button" data-state="focused" data-selected="false" data-close="true" aria-label="Focused unselected label chip with close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="focused" data-selected="false" data-close="false" aria-label="Focused unselected chip with leading icon">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="focused" data-selected="false" data-close="true" aria-label="Focused unselected chip with leading icon and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="focused" data-selected="false" data-close="false" aria-label="Focused unselected chip with avatar">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="focused" data-selected="false" data-close="true" aria-label="Focused unselected chip with avatar and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <div class="ds-chip-grid__label">Focused · Selected</div>
+          <button class="ds-chip ds-chip--label" type="button" data-state="focused" data-selected="true" data-close="false" aria-label="Focused selected label chip">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--label" type="button" data-state="focused" data-selected="true" data-close="true" aria-label="Focused selected label chip with close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="focused" data-selected="true" data-close="false" aria-label="Focused selected chip with leading icon">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="focused" data-selected="true" data-close="true" aria-label="Focused selected chip with leading icon and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="focused" data-selected="true" data-close="false" aria-label="Focused selected chip with avatar">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="focused" data-selected="true" data-close="true" aria-label="Focused selected chip with avatar and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <div class="ds-chip-grid__label">Dragged · Unselected</div>
+          <button class="ds-chip ds-chip--label" type="button" data-state="dragged" data-selected="false" data-close="false" aria-label="Dragged unselected label chip">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--label" type="button" data-state="dragged" data-selected="false" data-close="true" aria-label="Dragged unselected label chip with close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="dragged" data-selected="false" data-close="false" aria-label="Dragged unselected chip with leading icon">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="dragged" data-selected="false" data-close="true" aria-label="Dragged unselected chip with leading icon and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="dragged" data-selected="false" data-close="false" aria-label="Dragged unselected chip with avatar">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="dragged" data-selected="false" data-close="true" aria-label="Dragged unselected chip with avatar and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <div class="ds-chip-grid__label">Dragged · Selected</div>
+          <button class="ds-chip ds-chip--label" type="button" data-state="dragged" data-selected="true" data-close="false" aria-label="Dragged selected label chip">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--label" type="button" data-state="dragged" data-selected="true" data-close="true" aria-label="Dragged selected label chip with close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="dragged" data-selected="true" data-close="false" aria-label="Dragged selected chip with leading icon">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--leading-icon" type="button" data-state="dragged" data-selected="true" data-close="true" aria-label="Dragged selected chip with leading icon and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 8h-1l-1.5-3.5c-.2-.5-.7-.5-1.1-.5H8.6c-.4 0-.9 0-1.1.5L6 8H5c-.6 0-1 .4-1 1v8c0 .6.4 1 1 1h1c0 1.1.9 2 2 2s2-.9 2-2h4c0 1.1.9 2 2 2s2-.9 2-2h1c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1zm-11.5 8c-.8 0-1.5-.7-1.5-1.5S6.7 13 7.5 13s1.5.7 1.5 1.5S8.3 16 7.5 16zm9 0c-.8 0-1.5-.7-1.5-1.5S15.7 13 16.5 13s1.5.7 1.5 1.5S17.3 16 16.5 16zM6 10l1.5-4.5h9L18 10H6z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="dragged" data-selected="true" data-close="false" aria-label="Dragged selected chip with avatar">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+            </span>
+          </button>
+          <button class="ds-chip ds-chip--avatar" type="button" data-state="dragged" data-selected="true" data-close="true" aria-label="Dragged selected chip with avatar and close">
+            <span class="ds-chip__body">
+              <span class="ds-chip__avatar" aria-hidden="true">
+                <svg class="ds-chip__avatar-icon--person" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                </svg>
+                <svg class="ds-chip__avatar-icon--check" viewBox="0 0 24 24">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+              </span>
+              <span class="ds-chip__label">Label</span>
+              <span class="ds-chip__close" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L12 13.41l-6.29 6.3-1.42-1.42L10.59 12 4.29 5.71 5.7 4.29 12 10.59l6.29-6.3z"></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+        </div>
+      </section>
+
       <section class="ds-card">
         <h2>Stacked Card (M3)</h2>
         <h3>Media &amp; text</h3>
