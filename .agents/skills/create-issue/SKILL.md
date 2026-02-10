@@ -1,16 +1,16 @@
 ---
 name: create-issue
-description: Creates a fully specified Linear issue in the LETS GO team (Design System) using a structured Markdown description + sub-issues.
+description: Creates a fully specified Linear issue in the LETS GO team (Project: Design System) using a structured Markdown description + sub-issues.
 ---
 
 # Create Issue Skill
-Use the Create Issue skill to create a new Linear issue in the LETS GO team (Design System) based on the user's request and any provided Figma link/screenshots. The skill will extract key details, classify the task type, discover the correct status/labels dynamically, and fill out the issue description with a structured template. It will also create sub-issues for each acceptance criterion if applicable. Finally, it will return the Linear issue identifier and direct link in the chat.
+Use the Create Issue skill to create a new Linear issue in the LETS GO team (Project: Design System) based on the user's request and any provided Figma link/screenshots. The skill will extract key details, classify the task type, discover the correct status/labels dynamically, and fill out the issue description with a structured template. It will also create sub-issues for each acceptance criterion if applicable. Finally, it will return the Linear issue identifier and direct link in the chat.
 
 ## Trigger   
 This runs when the user asks to create an issue, e.g. "create an issue for this Figma design" or "I need a new issue for a bug fix". The user may optionally provide a Figma link and/or screenshots to help specify the task details.
 
 ## HARD RULES (must follow)
-- Always create issues in Linear team: LETS GO (Design System).
+- Always create issues in Linear team: LETS GO (Project: Design System).
 - Use Markdown in the issue `description`. 
 - If Figma fetch fails: create the task only if user provided enough info; otherwise ask for screenshots.
 
@@ -21,7 +21,7 @@ This runs when the user asks to create an issue, e.g. "create an issue for this 
 - Otherwise rely on user text (and screenshots if present).
 
 2. Extract key details (best effort):
-- When a Figma link is provided, use Figma Dev Mode to extract styling (sizes, typography, spacing, tokens, colors) and ensure the component design matches the linked Figma exactly.
+- When a Figma link is provided, use Figma Dev Mode to extract styling (sizes, typography, spacing, tokens, colors, ect.) and ensure the component design matches the linked Figma exactly.
 - Component name
 - States/variants
 - Copy/text
@@ -36,17 +36,17 @@ This runs when the user asks to create an issue, e.g. "create an issue for this 
 - component | bug | change | tech debt
 
 4. Discover labels:
-- Fetch issue labels for the LETS GO team and pick the best label by name match:
-  - component → "Feature"
+- Fetch issue labels for the issue and pick the best label by name match:
+  - component → "Component"
   - bug → "Bug"
-  - change or tech debt → "Improvement"
+  - change or tech debt → "Change"
 - If no matching label exists, create without label and note that in the response.
 
 5. Respond with [template](TEMPLATE.md) filled out with the extracted details and ask for confirmation before creating the issue in Linear. 
 
 6. Create issue:
-- Team: LETS GO (Design System)
-- Status: choose the team's backlog/unstarted status by type if available (e.g., `backlog` or `unstarted`), unless user explicitly asks for a different status.
+- Team: LETS GO (Project: Design System)
+- Status: set status to `backlog`, unless user explicitly asks for a different status.
 - Title format: <human readable name> (do not append the identifier)
 
 7. Fill `description` with this template (Markdown):
