@@ -34,7 +34,7 @@ This runs when the user asks to resolve an issue, e.g. "Resolve this issue with 
 - “Write APPROVE to start implementation.”
 
 ## Implementation phase (only after user writes APPROVE #1)
-- Set Linear status to `In Progress` (discover via Linear MCP).
+- Set issue status to `In Progress` (discover via Linear MCP).
 - Create branch locally
 - Implement in small, safe steps (patch/diff style)
 
@@ -80,5 +80,5 @@ After implementation:
 - If user is happy but not ready to approve, keep status at `In Progress`.
 
 ## Done phase (only after user writes APPROVE #2)
-- Set Linear status to `Done` (discover via Linear MCP).
+- Set issue and all subissues status to `Done` (discover via Linear MCP).
 - STOP

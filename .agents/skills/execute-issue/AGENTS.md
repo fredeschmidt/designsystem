@@ -5,13 +5,7 @@ AG# Execute Issue Skill
 | User Says                            | Use This Skill?      |
 | ------------------------------------ | -------------------- |
 | "Resolve this issue XX"              | ✅ Yes               |
-| "Execute this issue"                 | ✅ Yes               |
-| "Build this Linear project"          | ✅ Yes               |
-| "Implement the tasks in order"       | ✅ Yes               |
-| "Start working on the first task"    | ✅ Yes               |
-| "Execute the project"                | ✅ Yes               |
-| "Break down this feature into tasks" | ❌ Use `create-issue` |
-| "Create a Linear project for..."     | ❌ Use `create-issue` |
+| "Execute this issue XX"              | ✅ Yes               |
 
 ## Related Skills
 
