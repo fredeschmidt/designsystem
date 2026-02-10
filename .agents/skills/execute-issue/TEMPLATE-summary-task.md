@@ -1,7 +1,7 @@
 # 📋 Summary Task
 
 ## 📌 Task Information
-- **Task ID**: [Linear Issue ID, e.g., AI-123]
+- **Task ID**: [Linear Issue ID, e.g., LG-123]
 - **Title**: [Task Title]
 - **Team**: [Team Name]
 - **Current Status**: [Backlog/Todo/In Progress/Done or team-specific]

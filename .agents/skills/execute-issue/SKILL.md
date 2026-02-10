@@ -4,16 +4,16 @@ description: Execute a Linear issue created by the create-issue skill, following
 ---
 
 # Execute Issue Skill
-Use the Execute Issue skill to read a Linear issue created by the Create Issue skill, propose a plan for implementation, and execute the work while adhering to the specified workflow and repo constraints. The skill will discover team statuses dynamically and update the Linear issue status as it progresses through the implementation phases, and will only set the issue to Done when the user explicitly confirms completion.
+Use the Execute Issue skill to read a Linear issue created by the Create Issue skill, propose a plan for implementation, and execute the work while adhering to the specified workflow and repo constraints. The skill will discover statuses dynamically and update the Linear issue status as it progresses through the implementation phases, and will only set the issue to done when the user explicitly confirms completion.
 
 ## Trigger   
 This runs when the user asks to resolve an issue, e.g. "Resolve this issue with ID <linear-id>". The skill will read the issue details, propose a plan, and wait for the user's approval before starting implementation.
 
 ## HARD RULES (must follow)
-- Only operate on Linear team: LETS GO (Design System).
+- Only operate on Linear team: LETS GO (Project: Design System).
 - Status flow (by status type):
-  - backlog/unstarted → started → completed
-- Never set Done unless user explicitly says "merged" or "completed".
+  - Backlog → Todo → In Progress → Done
+- Never set done unless user explicitly says "merged" or "completed".
 - When a Figma link is provided, the implementation MUST follow Figma Dev Mode styling exactly: extract typography, sizing, spacing, color tokens, elevation, and component anatomy from Dev Mode and use those values (or mapped design tokens) so the component visually matches the Figma design.
 - Always verify and use exact Figma Dev Mode values for sizes, colors, borders, radii, stroke widths, spacing, and typography. Do not approximate — map values to existing design tokens or add new tokens via an ADR when necessary. If Dev Mode values cannot be retrieved, request access or screenshots before implementing.
 - Never merge/deploy automatically.
@@ -34,7 +34,7 @@ This runs when the user asks to resolve an issue, e.g. "Resolve this issue with 
 - “Write APPROVE to start implementation.”
 
 ## Implementation phase (only after user writes APPROVE #1)
-- Set Linear status to the team's `started` status (discover via Linear MCP).
+- Set Linear status to `In Progress` (discover via Linear MCP).
 - Create branch locally
 - Implement in small, safe steps (patch/diff style)
 
@@ -77,8 +77,8 @@ If a component needs a new token (e.g., `--ds-error`, `--ds-focus`), add it to t
 After implementation:
 - Summarize what changed + how to test
 - Ask: “Are you happy with the result? Write APPROVE to mark it ready.”
-- If user is happy but not ready to approve, keep status at the team's `started` status.
+- If user is happy but not ready to approve, keep status at `In Progress`.
 
 ## Done phase (only after user writes APPROVE #2)
-- Set Linear status to the team's `completed` status (discover via Linear MCP).
+- Set Linear status to `Done` (discover via Linear MCP).
 - STOP
