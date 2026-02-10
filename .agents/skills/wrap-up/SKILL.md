@@ -1,38 +1,37 @@
 ---
 name: wrap-up
-description: Commits, pushes, merges to main locally, ends on main. Never deletes branches.
+description: Finalize work by reviewing with multiple AI personas, then committing, pushing, and opening a PR. Never deletes branches.
 ---
 
-# Wrap Up Branch Skill
-Use the Wrap Up skill to commit your changes, push the branch to remote, merge it to main locally, and end on the main branch. This skill ensures that you follow a structured workflow while wrapping up your work on a feature or fix, and it will never delete branches or deploy automatically.    
+# Wrap Up Skill
+Finalize current work: collect changes → review → judge → commit & PR.
 
 ## Trigger    
-This runs when the user asks to wrap up a branch, e.g. "Wrap up this branch". The skill will guide you through the process of committing, pushing, merging, and switching branches.
+This runs when the user asks to wrap up a branch, e.g. "Wrap up this branch". The skill will guide you through the process of collecting changes, reviewing, judging readiness, and then committing and preparing a PR.
 
 ## HARD RULES (must follow)
 - Never delete branches automatically.
 - Never deploy automatically.
-- When the wrap-up workflow completes, set the related Linear issue status to the team's `completed` status (discover via Linear MCP).
+- When the wrap-up workflow completes, set the related Linear issue status to `completed` status (discover via Linear MCP).
 
 ## Workflow
-1. Check working tree:
+1. Collect changes:
+- Check working tree and summarize changes.
 - If untracked files exist: STOP and ask user whether to add/commit or discard.
-- If there are changes: stage them.
 
-2. Commit:
+2. Review:
+- Review diffs at a high level and call out any risks or missing tests.
+
+3. Judge:
+- Ask the user for confirmation to proceed with commit & PR preparation.
+
+4. Commit & PR:
+- Stage changes.
 - Use a descriptive commit message summarizing the feature/fix.
-
-3. Push:
 - Push/publish the current branch to remote.
-
-4. Merge to main (local):
-- Switch to main
-- Pull/rebase main (if applicable)
-- Merge feature branch into main
-- If there are merge conflicts: STOP and ask user.
+- Prepare PR notes (do not merge unless explicitly asked).
 
 5. End state:
-- Leave repo on main
 - Confirm completion in chat.
-  - Set the related Linear issue status to the team's `completed` status when all steps complete.
+  - Set the related Linear issue status to `completed` status when all steps complete.
   
