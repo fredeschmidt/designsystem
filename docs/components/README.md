@@ -1,7 +1,7 @@
 # Components
 ...existing code...
 - [Checkbox](checkbox.md): Checkbox component supporting checked, indeterminate, and unchecked states, with and without background circles.
- - [Toggle Buttons](toggle.md): Toggle (switch) component with on/off states, disabled, focus, and size variants.
+- [Radio Button](radio.md): Radio button component with enabled/disabled selected and unselected states.
 
 Her ligger korte beskrivelser af vores komponenter.
 
