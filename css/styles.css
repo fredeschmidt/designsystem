@@ -15,16 +15,6 @@
   --ds-radius: 12px;
   --ds-border-size: 1px;
   --ds-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
-  /* Checkbox: use standard --ds- tokens (Figma Dev Mode values are canonical for theme-1) */
-  --ds-checkbox-size: 24px;
-  --ds-radius-small: 2px;
-  --ds-error: #D42B2B;
-  /* Radio/control tokens (Figma Dev Mode values are canonical for theme-1) */
-  --ds-on-surface-variant: #130F0F;
-  --ds-control-disabled: rgba(31,31,31,0.38);
-  --ds-control-size: 24px;
-  --ds-control-stroke: 2px;
-  --ds-control-dot-size: 10px;
   /* Switch/control tokens (Figma Dev Mode values are canonical for theme-1) */
   --ds-outline: #1C1616;
   --ds-outline-variant: rgba(31,31,31,0.12);
@@ -55,16 +45,6 @@
   --ds-radius: 20px;
   --ds-border-size: 3px;
   --ds-shadow: 0;
-  /* Standard checkbox/token values (derived from this theme) */
-  --ds-checkbox-size: 24px;
-  --ds-radius-small: 5px;
-  --ds-error: #D42B2B;
-  /* Radio/control tokens (derived from this theme) */
-  --ds-on-surface-variant: var(--ds-fg);
-  --ds-control-disabled: rgba(23,38,255,0.38);
-  --ds-control-size: 30px;
-  --ds-control-stroke: 2px;
-  --ds-control-dot-size: 15px;
   /* Switch/control tokens (derived from theme-2) */
   --ds-outline: var(--ds-border);
   --ds-outline-variant: color-mix(in srgb, var(--ds-border) 12%, transparent);
@@ -95,16 +75,6 @@
   --ds-radius: 6px;
   --ds-border-size: 1px;
   --ds-shadow: 0 8px 24px rgba(0,0,0,0.7);
-  /* Standard checkbox/token values (derived from this theme) */
-  --ds-checkbox-size: 24px;
-  --ds-radius-small: 0px;
-  --ds-error: #D42B2B;
-  /* Radio/control tokens (derived from this theme) */
-  --ds-on-surface-variant: var(--ds-fg);
-  --ds-control-disabled: rgba(255,255,255,0.38);
-  --ds-control-size: 30px;
-  --ds-control-stroke: 4px;
-  --ds-control-dot-size: 10px;
   /* Switch/control tokens (derived from theme-3) */
   --ds-outline: var(--ds-border);
   --ds-outline-variant: color-mix(in srgb, var(--ds-border) 12%, transparent);

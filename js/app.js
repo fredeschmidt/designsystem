@@ -1,4 +1,3 @@
-import './checkbox.js';
 import './switch.js';
 
 (function () {
