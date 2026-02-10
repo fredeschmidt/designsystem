@@ -12,7 +12,7 @@ This runs when the user asks to wrap up a branch, e.g. "Wrap up this branch". Th
 ## HARD RULES (must follow)
 - Never delete branches automatically.
 - Never deploy automatically.
- - When the wrap-up workflow completes, set the related Asana task status to "Klar til godkendelse".
+- When the wrap-up workflow completes, set the related Linear issue status to the team's `completed` status (discover via Linear MCP).
 
 ## Workflow
 1. Check working tree:
@@ -34,5 +34,5 @@ This runs when the user asks to wrap up a branch, e.g. "Wrap up this branch". Th
 5. End state:
 - Leave repo on main
 - Confirm completion in chat.
-  - Set the related Asana task status to "Klar til godkendelse" when all steps complete.
+  - Set the related Linear issue status to the team's `completed` status when all steps complete.
   

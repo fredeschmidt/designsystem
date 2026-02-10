@@ -1,18 +1,18 @@
 ---
-name: execute-task
-description: Execute an Asana task created by the create-task skill, following the specified workflow and repo constraints, and update the task status accordingly.
+name: execute-issue
+description: Execute a Linear issue created by the create-issue skill, following the specified workflow and repo constraints, and update the issue status accordingly.
 ---
 
-# Execute Task Skill
-Use the Execute Task skill to read an Asana task created by the Create Task skill, propose a plan for implementation, and execute the task while adhering to the specified workflow and repo constraints. The skill will update the Asana task status as it progresses through the implementation phases, and will only set the task to Done when the user explicitly confirms completion.
+# Execute Issue Skill
+Use the Execute Issue skill to read a Linear issue created by the Create Issue skill, propose a plan for implementation, and execute the work while adhering to the specified workflow and repo constraints. The skill will discover team statuses dynamically and update the Linear issue status as it progresses through the implementation phases, and will only set the issue to Done when the user explicitly confirms completion.
 
 ## Trigger   
-This runs when the user asks to resolve a task, e.g. "Resolve this task with ID <asana-id>". The skill will read the task details, propose a plan, and wait for the user's approval before starting implementation.
+This runs when the user asks to resolve an issue, e.g. "Resolve this issue with ID <linear-id>". The skill will read the issue details, propose a plan, and wait for the user's approval before starting implementation.
 
 ## HARD RULES (must follow)
-- Only operate on Asana project: AI PROJEKT.
-- Status flow:
-  - Mangler → Igang → Klar til godkendelse → Done
+- Only operate on Linear team: LETS GO (Design System).
+- Status flow (by status type):
+  - backlog/unstarted → started → completed
 - Never set Done unless user explicitly says "merged" or "completed".
 - When a Figma link is provided, the implementation MUST follow Figma Dev Mode styling exactly: extract typography, sizing, spacing, color tokens, elevation, and component anatomy from Dev Mode and use those values (or mapped design tokens) so the component visually matches the Figma design.
 - Always verify and use exact Figma Dev Mode values for sizes, colors, borders, radii, stroke widths, spacing, and typography. Do not approximate — map values to existing design tokens or add new tokens via an ADR when necessary. If Dev Mode values cannot be retrieved, request access or screenshots before implementing.
@@ -20,7 +20,7 @@ This runs when the user asks to resolve a task, e.g. "Resolve this task with ID 
 
 ## Workflow
 
-1. Read the Asana task (via Asana MCP).
+1. Read the Linear issue (via Linear MCP).
 
 2. Respond with [template](TEMPLATE-summary-task.md) filled out with the task details and ask for confirmation before starting implementation. 
 
@@ -28,13 +28,13 @@ This runs when the user asks to resolve a task, e.g. "Resolve this task with ID 
 - docs/components/...
 - docs/decisions/...
 
-4. Respond with [template](TEMPLATE-implementation-plan.md) filled out with the proposed implementation plan based on the task details, constraints, and repo structure.
+4. Respond with [template](TEMPLATE-implementation-plan.md) filled out with the proposed implementation plan based on the issue details, constraints, and repo structure.
 
 5. Ask for approval:
 - “Write APPROVE to start implementation.”
 
 ## Implementation phase (only after user writes APPROVE #1)
-- Set Asana status = Igang
+- Set Linear status to the team's `started` status (discover via Linear MCP).
 - Create branch locally
 - Implement in small, safe steps (patch/diff style)
 
@@ -77,8 +77,8 @@ If a component needs a new token (e.g., `--ds-error`, `--ds-focus`), add it to t
 After implementation:
 - Summarize what changed + how to test
 - Ask: “Are you happy with the result? Write APPROVE to mark it ready.”
-- If user is happy but not ready to approve, keep status = Igang.
+- If user is happy but not ready to approve, keep status at the team's `started` status.
 
-## Ready phase (only after user writes APPROVE #2)
-- Set Asana status = Klar til godkendelse
+## Done phase (only after user writes APPROVE #2)
+- Set Linear status to the team's `completed` status (discover via Linear MCP).
 - STOP

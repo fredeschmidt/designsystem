@@ -1,7 +1,7 @@
 # 📋 Implementation Plan
 
 ## 🌿 Branch & Repository
-- **Branch Name**: [feature/ID-<AsanaTaskID>-short-description]
+- **Branch Name**: [feature/<LinearID>-short-description]
 - **Base Branch**: main
 
 ## 📁 Files to Create/Modify
@@ -13,15 +13,15 @@
 
 ### ✅ Commit 1: [Description]
 - Files: [file1, file2]
-- Message: `feat(ID-<AsanaTaskID>): [description]`
+- Message: `feat(<LinearID>): [description]`
 
 ### ✅ Commit 2: [Description]
 - Files: [file3, file4]
-- Message: `docs(ID-<AsanaTaskID>): [description]`
+- Message: `docs(<LinearID>): [description]`
 
 ### ✅ Commit 3: [Description] (if needed)
 - Files: [file5]
-- Message: `test(ID-<AsanaTaskID>): [description]`
+- Message: `test(<LinearID>): [description]`
 
 ## 📤 Draft PR Text
 
@@ -29,7 +29,7 @@
 [What does the PR change?]
 
 ### 🤔 Hvorfor
-[Which problem does it solve? Link to Asana task]
+[Which problem does it solve? Link to Linear issue]
 
 ### 🔄 Hvad er ændret
 - [x] Code
@@ -42,14 +42,14 @@
 ### 📸 Screenshots / video (hvis relevant)
 [If applicable, add screenshots or video links]
 
-### 🎯 Asana
-- Task: [ID + link to Asana task]
+### 🎯 Linear
+- Issue: [ID + link to Linear issue]
 
 ### ✨ Definition of Done
 - [ ] ✅ Acceptance criteria opfyldt
 - [ ] 📚 Docs opdateret (hvis relevant)
 - [ ] 🧪 Tests opdateret/tilføjet (hvis relevant)
-- [ ] 👀 Klar til godkendelse (status sat i Asana)
+- [ ] ✅ Completed status set in Linear
 
 ## 🧪 Test Plan
 1. 🔍 [Test step 1]

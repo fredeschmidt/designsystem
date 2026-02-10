@@ -1,9 +1,9 @@
-# 📌 Task Template
+# 📌 Issue Template
 
 ## 👀 Overview
 - **🏷️ Name**: [Component/Task Name]
 - **📝 Type**: [component|bug|change|tech debt]
-- **📂 Section**: [Assigned Section]
+- **🏷️ Label**: [Team label]
 
 ## 🔍 Details
 
@@ -25,7 +25,7 @@
 - **✅ Must**: [Critical requirements]
 - **❌ Must Not**: [Restrictions and limitations]
 
-## 📝 Task Notes (Asana)
+## 📝 Issue Description (Linear)
 
 **🔴 Problem:**
 - [One sentence problem statement]
@@ -44,4 +44,4 @@
 - [ ] ✓ [Criterion 3]
 
 ---
-**Ready to create task in Asana?** ✓ Yes / ✗ No 🚀
+**Ready to create issue in Linear?** ✓ Yes / ✗ No 🚀

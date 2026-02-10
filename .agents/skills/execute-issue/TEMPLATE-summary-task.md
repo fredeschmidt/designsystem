@@ -1,11 +1,11 @@
 # 📋 Summary Task
 
 ## 📌 Task Information
-- **Task ID**: [Asana Task ID]
+- **Task ID**: [Linear Issue ID, e.g., AI-123]
 - **Title**: [Task Title]
-- **Project**: AI PROJEKT
-- **Current Status**: [Mangler|Igang|Klar til godkendelse|Done]
-- **Section**: [Components|Bugs|Other]
+- **Team**: [Team Name]
+- **Current Status**: [Backlog/Todo/In Progress/Done or team-specific]
+- **Label**: [Feature/Bug/Improvement or team-specific]
 
 ## 🔴 Problem Statement
 [From task notes - Problem section]
