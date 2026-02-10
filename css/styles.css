@@ -1,6 +1,7 @@
 
 @import "./switches-without-icons.css";
 @import "./radio-button.css";
+@import "./stacked-card.css";
 
 /* ========== Theme Token Overrides ========== */
 :root[data-theme="theme-1"] {
@@ -9,23 +10,33 @@
   --ds-fg: #111827;
   --ds-muted: #6b7280;
   --ds-border: #e5e7eb;
-  --ds-primary: #0375D2;
-  --ds-primary-hover: #1d4ed8;
-  --ds-surface: #f9fafb;
-  --ds-surface-2: #ffffff;
+  --ds-primary: #6750A4;
+  --ds-primary-hover: #5E43A5;
+  --ds-surface: #FEF7FF;
+  --ds-surface-2: #FEF7FF;
   --ds-radius: 12px;
   --ds-border-size: 1px;
   --ds-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
+  --ds-elevation-1: 0 1px 2px rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
   /* Switch/control tokens (Figma Dev Mode values are canonical for theme-1) */
   --ds-outline: #1C1616;
-  --ds-outline-variant: rgba(31,31,31,0.12);
-  --ds-surface-variant: #B3B1B1;
-  --ds-surface-variant-soft: rgba(179,177,177,0.12);
-  --ds-surface-subtle: #E8E8E8;
+  --ds-outline-variant: #CAC4D0;
+  --ds-surface-variant: #49454F;
+  --ds-surface-variant-soft: rgba(73,69,79,0.12);
+  --ds-surface-subtle: #F7F2FA;
   --ds-inverse-surface: #1F1F1F;
   --ds-on-inverse: #FFFFFF;
   --ds-on-primary: #FFFFFF;
-  --ds-on-surface-variant: #130F0F;
+  --ds-on-surface-variant: #49454F;
+  --ds-on-surface: #1D1B20;
+  --ds-primary-container: #EADDFF;
+  --ds-on-primary-container: #4F378A;
+  --ds-surface-container-low: #F7F2FA;
+  --ds-surface-container-high: #ECE6F0;
+  --ds-surface-container-highest: #E6E0E9;
+  --ds-media-placeholder: #ECE6F0;
+  --ds-focus-ring: #6750A4;
+  --ds-focus-ring-size: 3px;
   --ds-control-disabled: rgba(31,31,31,0.38);
   --ds-control-track-width: 52px;
   --ds-control-track-height: 32px;
@@ -48,6 +59,7 @@
   --ds-radius: 20px;
   --ds-border-size: 3px;
   --ds-shadow: 0;
+  --ds-elevation-1: 0 6px 18px rgba(0,0,0,0.18);
   /* Switch/control tokens (derived from theme-2) */
   --ds-outline: var(--ds-border);
   --ds-outline-variant: color-mix(in srgb, var(--ds-border) 12%, transparent);
@@ -58,6 +70,15 @@
   --ds-on-inverse: #FFFFFF;
   --ds-on-primary: #FFFFFF;
   --ds-on-surface-variant: var(--ds-fg);
+  --ds-on-surface: #111111;
+  --ds-primary-container: #E7E2FF;
+  --ds-on-primary-container: #1F1599;
+  --ds-surface-container-low: #FFF7F5;
+  --ds-surface-container-high: #FFEFEA;
+  --ds-surface-container-highest: #FFE6DB;
+  --ds-media-placeholder: #FFEFEA;
+  --ds-focus-ring: var(--ds-primary);
+  --ds-focus-ring-size: 3px;
   --ds-control-disabled: color-mix(in srgb, var(--ds-fg) 38%, transparent);
   --ds-control-track-width: 52px;
   --ds-control-track-height: 32px;
@@ -80,6 +101,7 @@
   --ds-radius: 6px;
   --ds-border-size: 1px;
   --ds-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  --ds-elevation-1: 0 10px 24px rgba(0,0,0,0.7);
   /* Switch/control tokens (derived from theme-3) */
   --ds-outline: var(--ds-border);
   --ds-outline-variant: color-mix(in srgb, var(--ds-border) 12%, transparent);
@@ -90,6 +112,15 @@
   --ds-on-inverse: #FFFFFF;
   --ds-on-primary: #FFFFFF;
   --ds-on-surface-variant: var(--ds-fg);
+  --ds-on-surface: #FFFFFF;
+  --ds-primary-container: #0B1C24;
+  --ds-on-primary-container: #9BE8FF;
+  --ds-surface-container-low: #121212;
+  --ds-surface-container-high: #1A1A1A;
+  --ds-surface-container-highest: #222222;
+  --ds-media-placeholder: #1A1A1A;
+  --ds-focus-ring: #00E5FF;
+  --ds-focus-ring-size: 3px;
   --ds-control-disabled: color-mix(in srgb, var(--ds-fg) 38%, transparent);
   --ds-control-track-width: 52px;
   --ds-control-track-height: 32px;
@@ -116,6 +147,11 @@
   --ds-on-surface-variant: #130F0F;
   --ds-control-disabled: rgba(31,31,31,0.38);
   --ds-space-3: 12px;
+  --ds-space-4: 4px;
+  --ds-space-8: 8px;
+  --ds-space-12: 12px;
+  --ds-space-16: 16px;
+  --ds-space-32: 32px;
   --ds-control-size: 40px;
   --ds-control-stroke: 3px;
   --ds-control-dot-size: 20px;
@@ -127,6 +163,64 @@
   --ds-inverse-surface: #1F1F1F;
   --ds-on-inverse: #FFFFFF;
   --ds-on-primary: #FFFFFF;
+  --ds-on-surface: #1D1B20;
+  --ds-primary-container: #EADDFF;
+  --ds-on-primary-container: #4F378A;
+  --ds-surface-container-low: #F7F2FA;
+  --ds-surface-container-high: #ECE6F0;
+  --ds-surface-container-highest: #E6E0E9;
+  --ds-media-placeholder: #ECE6F0;
+  --ds-elevation-1: 0 1px 2px rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+  --ds-focus-ring: #6750A4;
+  --ds-focus-ring-size: 3px;
+  --ds-font-title: "Roboto", var(--ds-font);
+  --ds-font-body: "Roboto", var(--ds-font);
+  --ds-font-label: "Roboto", var(--ds-font);
+  --ds-font-mono: "Roboto Mono", var(--ds-font);
+  --ds-title-medium-size: 16px;
+  --ds-title-medium-line: 24px;
+  --ds-title-medium-track: 0.15px;
+  --ds-title-medium-weight: 500;
+  --ds-body-medium-size: 14px;
+  --ds-body-medium-line: 20px;
+  --ds-body-medium-track: 0.25px;
+  --ds-body-medium-weight: 400;
+  --ds-body-large-size: 16px;
+  --ds-body-large-line: 24px;
+  --ds-body-large-track: 0.5px;
+  --ds-body-large-weight: 400;
+  --ds-label-large-size: 14px;
+  --ds-label-large-line: 20px;
+  --ds-label-large-track: 0.1px;
+  --ds-label-large-weight: 500;
+  --ds-stacked-card-width: 360px;
+  --ds-stacked-card-height: 480px;
+  --ds-stacked-card-radius: 12px;
+  --ds-stacked-card-header-height: 72px;
+  --ds-stacked-card-media-height: 188px;
+  --ds-stacked-card-slot-height: 379px;
+  --ds-avatar-size: 40px;
+  --ds-icon-size: 24px;
+  --ds-icon-button-size: 40px;
+  --ds-action-row-height: 40px;
+  --ds-button-height: 48px;
+  --ds-button-radius: 100px;
+  --ds-slot-radius: 16px;
+  --ds-slot-border-size: 2px;
+  --ds-slot-title-size: 12px;
+  --ds-slot-text-size: 11px;
+  --ds-slot-line-height: 16px;
+  --ds-slot-title-weight: 700;
+  --ds-slot-text-weight: 400;
+  --ds-media-shape-radius: 8px;
+  --ds-slot-pattern-stripe: 6px;
+  --ds-slot-pattern-size: 12px;
+  --ds-media-shape-opacity: 0.5;
+  --ds-slot-pattern-opacity: 0.4;
+  --ds-slot-pattern-strength: 35%;
+  --ds-media-shape-strength: 35%;
+  --ds-focus-ring-opacity: 40%;
+  --ds-slot-content-max-width: 240px;
   --ds-control-track-width: 52px;
   --ds-control-track-height: 32px;
   --ds-control-track-radius: 36px;
@@ -158,7 +252,7 @@ body {
   color: var(--ds-header);
 }
 
-.ds-title { margin: 0; font-size: 28px; }
+.ds-title { margin: 0; font-size: 35px; }
 h2 { margin: 0 0 20px; font-size: 22px; }
 .ds-subtitle { margin: 6px 0 0; color: var(--ds-muted); }
 
@@ -173,4 +267,3 @@ h2 { margin: 0 0 20px; font-size: 22px; }
 }
 
 .ds-row { display: flex; gap: 10px; flex-wrap: wrap; }
-

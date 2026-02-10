@@ -34,4 +34,4 @@ This runs when the user asks to wrap up a branch, e.g. "Wrap up this branch". Th
 5. End state:
 - Leave repo on main
 - Confirm completion in chat.
-  - Set the related Linear issue status `completed` when all steps complete.
+  - Set the Linear issue status `completed` when all steps complete.
