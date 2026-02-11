@@ -1,5 +1,6 @@
 
 @import "./switches-without-icons.css";
+@import "./list-item.css";
 @import "./radio-button.css";
 @import "./stacked-card.css";
 @import "./input-chip.css";
@@ -21,6 +22,7 @@
   --ds-on-primary-container: #4F378A;
   /* Switch/control tokens (Figma Dev Mode values are canonical for theme-1) */
   --ds-outline-variant: #CAC4D0;
+  --ds-outline-strong: #79747E;
   --ds-surface-variant: #49454F;
   --ds-surface-variant-soft: rgba(73,69,79,0.12);
   --ds-surface-subtle: #F7F2FA;
@@ -155,6 +157,7 @@
   --ds-muted: #6b7280;
   --ds-border: #e5e7eb;
   --ds-border-size: 1px;
+  --ds-border-size-2: 2px;
   --ds-primary: #0375D2;
   --ds-primary-hover: #1d4ed8;
   --ds-secondary: #5F5F5F;
@@ -188,6 +191,7 @@
   /* Borders and outlines */
   --ds-outline: #1C1616;
   --ds-outline-variant: rgba(31,31,31,0.12);
+  --ds-outline-strong: var(--ds-outline);
 
   /* Effects */
   --ds-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
@@ -226,7 +230,10 @@
   --ds-control-track-radius: 36px;
   --ds-control-padding-x: 6px;
   --ds-control-padding-y: 4px;
+  --ds-control-padding-x-wide: 8px;
+  --ds-control-padding-y-tight: 2px;
   --ds-control-thumb-size: 24px;
+  --ds-control-thumb-size-small: 16px;
 
   /* Layout sizes */
   --ds-avatar-size: 40px;
@@ -236,6 +243,9 @@
   --ds-button-height: 48px;
   --ds-size-120: 120px;
   --ds-size-140: 140px;
+  --ds-size-64: 64px;
+  --ds-size-88: 88px;
+  --ds-size-360: 360px;
   --ds-xr-app-bar-width: 412px;
   --ds-xr-app-bar-height: 72px;
   --ds-xr-app-bar-radius: 36px;

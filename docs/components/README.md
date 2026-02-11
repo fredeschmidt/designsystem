@@ -1,6 +1,7 @@
 # Components
 ...existing code...
 - [Switches Without Icons](SwitchesWithoutIcons.md): Switch component without icons, with four Figma variants.
+- [List Item (M3) - Leading Switch](list-item.md): 3-line list item variant med leading switch og token-baserede states.
 - [XR App Bar (M3)](xr-app-bar.md): XR top app bar med center-aligned/small konfigurationer og elevation-varianter.
 
 Her ligger korte beskrivelser af vores komponenter.
