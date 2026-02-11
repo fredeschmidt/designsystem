@@ -1,0 +1,139 @@
+.ds-xr-app-bar-grid {
+  display: grid;
+  gap: var(--ds-space-8);
+}
+
+.ds-xr-app-bar-demo {
+  margin: 0;
+}
+
+.ds-xr-app-bar {
+  align-items: center;
+  border: 0;
+  border-radius: var(--ds-xr-app-bar-radius);
+  color: var(--ds-on-surface);
+  display: flex;
+  height: var(--ds-xr-app-bar-height);
+  margin: 0;
+  padding-block: var(--ds-xr-app-bar-padding-block);
+  position: relative;
+  width: min(100%, var(--ds-xr-app-bar-width));
+}
+
+.ds-xr-app-bar--surface-container {
+  background: var(--ds-surface-container);
+}
+
+.ds-xr-app-bar--surface-container-high {
+  background: var(--ds-surface-container-high);
+}
+
+.ds-xr-app-bar--surface-container-highest {
+  background: var(--ds-surface-container-highest);
+}
+
+.ds-xr-app-bar--center-aligned {
+  gap: var(--ds-xr-app-bar-action-gap);
+  justify-content: center;
+  padding-inline: var(--ds-xr-app-bar-padding-center-inline);
+}
+
+.ds-xr-app-bar--small {
+  padding-inline-end: var(--ds-xr-app-bar-padding-small-end);
+  padding-inline-start: var(--ds-xr-app-bar-padding-small-start);
+}
+
+.ds-xr-app-bar__headline {
+  color: var(--ds-on-surface);
+  font-family: var(--ds-font-title);
+  font-size: var(--ds-title-large-size);
+  font-weight: var(--ds-title-large-weight);
+  letter-spacing: var(--ds-title-large-track);
+  line-height: var(--ds-title-large-line);
+  margin: 0;
+}
+
+.ds-xr-app-bar--center-aligned .ds-xr-app-bar__label {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.ds-xr-app-bar--center-aligned .ds-xr-app-bar__headline {
+  text-align: center;
+}
+
+.ds-xr-app-bar--small .ds-xr-app-bar__label {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-inline: var(--ds-xr-app-bar-title-inline);
+}
+
+.ds-xr-app-bar--small .ds-xr-app-bar__headline {
+  max-width: var(--ds-xr-app-bar-title-max);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ds-xr-app-bar__actions {
+  display: flex;
+}
+
+.ds-xr-app-bar--small .ds-xr-app-bar__actions {
+  gap: 0;
+  justify-content: flex-end;
+}
+
+.ds-xr-app-bar--center-aligned .ds-xr-app-bar__leading {
+  inset-inline-start: var(--ds-xr-app-bar-padding-small-start);
+  position: absolute;
+}
+
+.ds-xr-app-bar--center-aligned .ds-xr-app-bar__actions {
+  inset-inline-end: var(--ds-xr-app-bar-padding-small-start);
+  position: absolute;
+}
+
+.ds-xr-app-bar__icon-button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: var(--ds-button-radius);
+  color: var(--ds-on-surface-variant);
+  cursor: pointer;
+  display: inline-flex;
+  height: var(--ds-xr-app-bar-touch-size);
+  justify-content: center;
+  padding: 0;
+  width: var(--ds-xr-app-bar-touch-size);
+}
+
+.ds-xr-app-bar__icon-button > span {
+  align-items: center;
+  border-radius: var(--ds-button-radius);
+  display: inline-flex;
+  height: var(--ds-xr-app-bar-icon-button-size);
+  justify-content: center;
+  width: var(--ds-xr-app-bar-icon-button-size);
+}
+
+.ds-xr-app-bar__icon-button svg {
+  fill: currentColor;
+  height: var(--ds-icon-size);
+  width: var(--ds-icon-size);
+}
+
+.ds-xr-app-bar__icon-button:focus-visible {
+  outline: var(--ds-border-size) solid var(--ds-focus-ring);
+  outline-offset: var(--ds-space-4);
+}
+
+.ds-xr-app-bar__icon-button:hover > span {
+  background: var(--ds-state-on-surface-variant-08);
+}
+
+.ds-xr-app-bar__icon-button:active > span {
+  background: var(--ds-state-on-surface-variant-10);
+}
